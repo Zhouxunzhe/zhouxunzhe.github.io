@@ -1,0 +1,224 @@
+
+
+<!-- 
+  IMPORTANT! 
+  
+  Keep this file unchanged to use as a template for all future project pages. 
+
+  For every new project you add to your portfolio, make a copy of this file in the
+  'project-pages' folder with a name related to the project.
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+    <!-- 
+      TODO
+
+      Upload your Unemployable (or whatever photo you like) to the assets/images folder
+      and change the name of the image below to match the uploaded one
+
+      Change the title in the <title> tag to whatever you would like the title of your portfolio to be
+
+      This should be the same across all pages.
+     -->
+    <link rel="icon" href="../assets/images/1311.png" />
+    <title>Zhouxunzhe's website</title>
+    <meta name="description" content="Zhouxunzhe's personal website.">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/typography.css">
+    <link rel="stylesheet" href="../css/utilities.css">
+
+		<script defer src="../js/script.js"></script>
+	</head>
+	<body>
+    <!-- NAVBAR -->
+    <div class="navbar">
+      <a class="nav-title-link" href="../index.html">
+        <!-- 
+          TODO - Change the "Portfolio Title" to whatever you want displayed in the top left
+
+          (this should be the same across all pages)
+         -->
+        <span class="nav-title">Homepage</span>
+        <!-- 
+          TODO - Change the email after 'mailto:' to your email address for contact 
+        
+          (this should be the same across all pages)
+        -->
+        <a class="button" href="mailto:xunzhe_zhou@gmail.com">
+          <span class="button-text">Contact Me</span>
+        </a>
+      </a>
+    </div>
+
+    <!-- MAIN PAGE CONTENT -->
+    <div id="main-content">
+
+      <!-- PROJECT HEADER -->
+      <div id="project-header">
+          <!-- 
+            TODO
+
+            - Change the 'main-title' text to the name of your project
+            - Change the 'body-text' text to a short and sweet description of your project (maybe the same as the one on the project card)
+            - Change "desktop.jpeg" to the image filename you uploaded in the assets/images folder.
+          -->
+        <div class="main-title"><a class="nav-title-link" href="https://github.com/Zhouxunzhe/NST-NeuralStyleTransfer" target="_blank">NST</a></div>
+        <image class="project-header-image" src="../assets/images/NST/framework.png">
+        <span class="image-caption">Resources of NST are publicly available at this https <a target="_blank" href="https://github.com/Zhouxunzhe/NST-NeuralStyleTransfer">URL</a>.</span>
+      </div>
+
+      <!-- PROJECT DETAILS -->
+      <!-- 
+        TODO
+
+        - Change the 'subheader-text' to whatever header you want for project details
+        - Add paragraphs using the <div class="body-text"></div> elements in the "project-details-content"
+      -->
+
+      <div id="project-details">
+        <div class="subheader-text">Background</div>
+        <div class="project-details-content">
+          <div class="body-text">Neural style transfer (NST) is a technique that blends the content of one image (named content image)
+            with the style of another image (named style image) using neural networks. The goal of the neural style
+            transfer algorithm is to take a content image and a style image, then produce a new image that retains the
+            content of the original image but has the artistic style of the style image.
+          </div> 
+          <div class="body-text"> As shown in papers, traditional CNNs methods cannot capture long-range dependencies owing to the limited
+            receptive field of convolution operation, while simply adopting single encoder-decoder transformer
+            architecture in NST tasks will face the issue of inability of fully capturing the content and the style of
+            images. In contrast, StyTr2 adopted two different transformer encoders to generate domain-specific
+            sequences for content and style respectively and a multi-layer transformer decoder to stylize the content
+            sequence according to the style sequence, acquiring better results than other transformer-based methods.</div>
+          <div class="body-text"> Inspired by StyTr2, we adopt the main architecture and replace the content and style encoders with the
+            pretrained ViT model. We propose a two-stage training strategy, where we first freeze the pretrained
+            encoders, and just train the decoder; then we wrap the encoders with LoRA and do joint training.</div>
+        </div>
+      </div>
+
+      <div id="project-details">
+        <div class="subheader-text">Our contributions</div>
+        <div class="project-details-content">
+          <div class="body-text">Our contributions are mainly four-fold:
+            <ul>
+              <li><b>Better image quality:</b> through the incorporation of pretrained models and LoRA, our model
+                performs better than other baselines in terms of both content loss and style loss, with the style loss
+                nearly half of the baselines.
+              </li>
+              <li><b>Less training computation:</b> the two-stage training strategy reduces the required training
+                computation significantly, only less than half of the training computation required by the original
+                StyTr2 model.
+              </li>
+              <li><b>Comprehensive ablation study:</b> we have tried different sets of hyperparameters to explore how
+                LoRA and the pretrained model configuration affect the model performance.
+              </li>
+            </ul>
+          </div>
+          
+          <img src="../assets/images/NST/loss.png">
+          <span class="image-caption">
+            <b>Table 1:</b> Test results comparison of our method and baselines
+          </span>
+          <img src="../assets/images/NST/images.png">
+          <span class="image-caption">
+            <b>Figure 1:</b> Generated images comparison of our method and baselines
+          </span>
+        </div>
+      </div>
+
+      <!-- IMAGE GALLERY -->
+      <div id="project-gallery">
+        <!-- TODO - Change the 'subheader-text' to whatever you want the Gallery section header to say -->
+        <div class="subheader-text">Image Gallery</div>
+        <div class="project-gallery-content">
+          <!-- 
+            TODO
+
+            This is where the images in the gallery live. Here's a simple gallery image for you to copy:
+
+            Full Width Image:
+
+              <div class="gallery-image-container">
+                <img src="../assets/images/IMAGE_NAME" class="gallery-image">
+                <span class="image-caption">IMAGE_CAPTION</span>
+              </div>
+
+            Half Width Image: 
+
+              <div class="gallery-image-container half-width">
+                <img src="../assets/images/IMAGE_NAME" class="gallery-image">
+                <span class="image-caption">IMAGE_CAPTION</span>
+              </div>
+
+            - To add an image to the this area, copy one of the above, paste it below this comment, and change the following:
+                - IMAGE_NAME: the name of the image file in assets/images
+                - IMAGE_CAPTION: to the caption of the image
+          -->
+          <div class="gallery-image-container two-third-width">
+            <img src="../assets/images/NST/process.png" class="gallery-image">
+            <span class="image-caption"><b>Figure 2:</b> Images generated in the early, mid and late stages of training</span>
+          </div>
+          <div class="gallery-image-container one-third-width">
+            <img src="../assets/images/NST/decoder.png" class="gallery-image">
+            <span class="image-caption"><b>Figure 3:</b> Transformer decoder, borrowed from the original StyTr2 paper
+              </span>
+          </div>
+          <div class="gallery-image-container">
+            <img src="../assets/images/NST/train_loss_1.png" class="gallery-image">
+            <span class="image-caption"><b>Figure 4:</b> Total loss training curve of training stage 1</span>
+          </div>
+          <div class="gallery-image-container">
+            <img src="../assets/images/NST/train_loss_2.png" class="gallery-image">
+            <span class="image-caption"><b>Figure 5:</b> Total loss training curve of training stage 2
+              </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div id="footer">
+      <a class="icon-link" href="https://github.com/Zhouxunzhe">
+        <image src="../assets/icons/github.svg" class="footer-icon"/>
+      </a>
+
+      <a class="icon-link" href="https://scholar.google.com/citations?user=IEi7AToAAAAJ">
+        <image src="../assets/icons/googlescholar.svg" class="footer-icon"/>
+      </a>
+
+      <a class="icon-link" href="https://www.linkedin.com/in/xunzhe-zhou/">
+        <image src="../assets/icons/linkedin.svg" class="footer-icon"/>
+      </a>
+      <!-- 
+        TODO - Change href to your Instagram account (can also delete entire "a" element if no Instagram) 
+
+        This should be the same across all pages.
+      -->
+      <a class="icon-link" target="_blank" href="https://www.instagram.com/xunzhe_zhou">
+        <image src="../assets/icons/instagram.svg" class="footer-icon"/>
+      </a>
+      <!-- 
+        TODO - Change href to your Twitter account (can also delete entire "a" element if no Twitter) 
+      
+        This should be the same across all pages.
+      -->
+      <a class="icon-link" target="_blank" href="https://twitter.com/xunzhe_zhou">
+        <image src="../assets/icons/twitter.svg" class="footer-icon"/>
+      </a>
+      <!-- 
+        TODO - Change the email after "mailto" to your contact email 
+      
+        This should be the same across all pages.
+      -->
+      <a class="icon-link" href="mailto:xunzhe_zhou@gmail.com">
+        <image src="../assets/icons/mail.svg" class="footer-icon"/>
+      </a>
+    </div>
+
+	</body>
+</html>
