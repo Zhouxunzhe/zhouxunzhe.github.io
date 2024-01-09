@@ -1,201 +1,370 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-
-    <!-- 
-      TODO
-
-      Upload your Unemployable (or whatever photo you like) to the assets/images folder
-      and change the name of the image below to match the uploaded one
-
-      Change the title in the <title> tag to whatever you would like the title of your portfolio to be
-
-      This should be the same across all pages.
-     -->
-    <link rel="icon" href="./assets/images/1311.png" />
-		<title>Zhouxunzhe's website</title>
-    <meta name="description" content="Zhouxunzhe's personal website.">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-		<link rel="stylesheet" href="./css/layout.css">
-    <link rel="stylesheet" href="./css/typography.css">
-    <link rel="stylesheet" href="./css/utilities.css">
-
-		<script defer src="./js/script.js"></script>
-	</head>
-	<body>
-    <!-- NAVBAR -->
-    <div class="navbar">
-      <a class="nav-title-link" href="./index.html">
-        <!-- TODO - Change the "Portfolio Title" to whatever you want displayed in the top left -->
-        <span class="nav-title">Homepage</span>
-         <!-- TODO - Change the email after 'mailto:' to your email address for contact -->
-        <a class="button" href="mailto:xunzhe_zhou@gmail.com">
-          <span class="button-text">Contact Me</span>
-        </a>
-      </a>
-    </div>
-
-    <!-- MAIN PAGE CONTENT -->
-    <div id="main-content">
-
-      <!-- PORTFOLIO HEADER -->
-      <div id="portfolio-header">
-        <div id="portfolio-header-image-container">
-          <!-- 
-            TODO
-
-            - Change the img "src" attribute to point to the Unemployable image you uploaded (or whatever image).
-            - Change the number to point to your Unemployable & replace the OpenSea link with your own
-            - If you aren't using an Unemployable as your image, remove the entire "a" element
-          -->
-          <img src="./assets/images/portrait.jpg" class="portfolio-header-image">
-          <!-- <a class="no-underline" target="_blank" href="https://opensea.io/assets/0xe0be388ab81c47b0f098d2030a1c9ef190691a8a/1311">
-            <span class="image-caption">Unemployables #1311</span>
-          </a> -->
-        </div>
-
-          <!-- 
-            TODO
-
-            - Change the main-title to whatver you want
-            - Change the body-text after that to a quick introduction to what you do
-            - Edit the button text if you feel like it. It will link to the projects section below.
-          -->
-        <div id="portfolio-header-text-container">
-            <div class="header-text">
-              <span class="main-title">Hey, I'm @xunzhe_zhou.</span>
-              <div class="body-text">I'm currently an undergraduate student at Fudan University, China. My interests are AI, soccer, games.</div>
-              </br>
-              <div class="body-text">Welcome to my personal website :)</div>
-            </div>
-            <a class="button" id="my-work-link">
-              <span class="button-text">Check out my projects</span> 
-              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Xunzhe Zhou's Homepage</title>
+        <link rel="icon" type="image/x-icon" href="assets/icon/robot.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet"
+          type="text/css">
+        <!-- <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" /> -->
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <link href="css/mystyle.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="sideNav">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <span class="d-block d-lg-none">Xunzhe Zhou</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt="..." /></span>
             </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#research">Research</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li> -->
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#publication">Publication</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Awards</a></li> -->
+                </ul>
+            </div>
+        </nav>
+        <!-- Page Content-->
+        <div class="container-fluid p-0">
+
+            <!-- About-->
+            <section class="resume-section" id="about">
+                <div class="resume-section-content">
+                    <h2 class="mb-0">
+                        Xunzhe Zhou (周训哲)
+                    </h2>
+                    <br>
+                    <div class="subheading mb-5">
+                        FUDAN UNIVERSITY · 
+                        <!-- <a href="mailto:name@email.com"> -->
+                        xunzhe_zhou [at] outlook [dot] com</a>
+                    </div>
+                    <p class="lead mb-5">
+                        I am currently an undergraduate student at <a target="_blank" href="https://www.fudan.edu.cn/en/">Fudan University</a>
+                        studying for my Bachelor's degree in Computer Science and Technology.
+                        I recently work on robotic motion planning tasks with Prof. 
+                        <a target="_blank" href="https://scholar.google.com/citations?user=DTbhX6oAAAAJ">Xiangyang Xue</a>
+                        [<a target="_blank" href="https://faculty.fudan.edu.cn/xyxue/zh_CN/index.htm">Homepage</a>].
+                        I also work closely with Prof. 
+                        <a target="_blank" href="https://scholar.google.com/citations?user=odFW4FoAAAAJ">Yanghua Xiao</a>
+                        [<a target="_blank" href="http://kw.fudan.edu.cn/people/xiaoyanghua/">Homepage</a>]
+                        studying large language models evaluation, 
+                        and Prof. <a target="_blank" href="https://scholar.google.com/citations?user=lwTIUQIAAAAJ">Siyang Leng</a>
+                        [<a target="_blank" href="https://faculty.fudan.edu.cn/syleng/zh_CN/index.htm">Homepage</a>]
+                        studying digital twins of dynamical systems.
+                    </p>
+                    <p class="lead mb-5">
+                        I have also spent a wonderful semester at <a target="_blank" href="https://www.berkeley.edu/">UC Berkeley</a> 
+                        at fall 2023, mainly studying deep learning, optimization models, and artificial intelligence.
+                    </p>
+                    <p class="lead mb-5">
+                        <b> I am now seeking a Ph.D. position in Robotics. Please reach out if you think I could be a good fit!</b>
+                    </p>
+                    <div class="social-icons">
+                        <a class="footer" target="_blank" href="https://github.com/Zhouxunzhe">
+                            <image src="./assets/icon/github.ico" class="footer-icon"/>
+                        </a>
+                        <a class="footer" target="_blank" href="https://scholar.google.com/citations?user=IEi7AToAAAAJ">
+                            <image src="./assets/icon/scholar.ico" class="footer-icon"/>
+                        </a>
+                        <a class="footer" target="_blank" href="https://www.linkedin.com/in/xunzhe-zhou/">
+                            <image src="./assets/icon/linkedin.ico" class="footer-icon"/>
+                        </a>
+                        <a class="footer" target="_blank" href="https://twitter.com/ZHOUxzhe">
+                            <image src="./assets/icon/twitter.ico" class="footer-icon"/>
+                        </a>
+                        <a class="footer" target="_blank" href="./assets/files/CV_202401.pdf">
+                            <image src="./assets/icon/resume.ico" class="footer-icon"/>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+
+            <!-- Research-->
+            <section class="resume-section" id="research">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Research Interest</h2>
+                    <div class="col-lg-12" >
+                        <p style="display:inline">
+                            My research interest lies in embodied AI, particularly robotics, computer vision, and natural language processing 
+                            with the primary goal of <b> achieving general intelligent robotic action </b> from mainly two perspectives:
+                        </p>
+                        <p>
+                            <ul>
+                                <li> Use language and vision (possibly audio) foundation models to help robots fully understand the world.</li>
+                                <li> Help robots interact with the environment with intelligent agents to learn more general policies.</li>
+                            </ul>
+                        </p>
+                        <p>
+                            Ultimately, my goal is to enable robots to understand human language and visual environment,
+                            then assist humans in unstructured environments, particularly at life and work scenarios. 
+                            To achieve this, many of my works currently consider tasks in <b>robotic reasoning and planning</b>, 
+                            which I think are the foundations for robotic manipulation.
+                        </p>
+                    </div>
+                    <h2 class="mb-5" style="padding-top: 3rem;">News</h2>
+                    <div class="list-container">
+                        <div class="row" style="line-height: 1.7;">
+                            <div class="col-md-2 text-muted text-right">
+                                01/2024
+                            </div>
+                            <div class="col-md-10 text-muted">
+                                I started to work with Prof. Xiangyang Xue, studying robotic motion planning.
+                            </div>
+                            <div class="col-md-2 text-muted text-right">
+                                12/2023
+                            </div>
+                            <div class="col-md-10 text-muted">
+                                Our paper <a  href="https://arxiv.org/abs/2309.09150" target="_blank">
+                                    <i>Can Large Language Models Understand Real-World Complex Instructions?</i></a>
+                                    was accepted by AAAI 2024!
+                            </div>
+                            <div class="col-md-2 text-muted text-right">
+                                08/2023
+                            </div>
+                            <div class="col-md-10 text-muted">
+                                I went to UC Berkeley for exchange, mainly studying CS182 Deep Learning, EECS127 Optimization Models, 
+                                CS188 Intro to AI (and CS285 Reinforcement Learning) with GPA 4.0.
+                            </div>
+                            <div class="col-md-2 text-muted text-right">
+                                06/2023
+                            </div>
+                            <div class="col-md-10 text-muted">
+                                I started to work with Prof. Yanghua Xiao and Dr. <a target="_blank" href="https://abbey4799.github.io/">Qianyu He</a>, 
+                                studying large language models evaluation.
+                            </a>
+                            </div>
+                            <div class="col-md-2 text-muted text-right">
+                                09/2022
+                            </div>
+                            <div class="col-md-10 text-muted">
+                                I started to work with Prof. Siyang Leng, studying digital twins of dynamical systems.
+                            </div>
+                            <div class="col-md-2 text-muted text-right">
+                                09/2020
+                            </div>
+                            <div class="col-md-10 text-muted">
+                                I started my study at Fudan University for B.S. in Computer Science and Technology.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+
+            <!-- Experience-->
+            <section class="resume-section" id="experience">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Experience</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">ROBOTICS MOTION PLANNING</h3>
+                            <div class="subheading mb-3">School of Computer Science, Fudan University</div>
+                            <p>
+                                We study to enhance the motion planning performance of
+                                robotics tasks with vision-language foundation models.
+                                I am now writing survey and basecode for the model.
+                                I also participate in Vision Language Models Hallucinations research recently.
+                            </p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-secondary">Jan 2024 - Now</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">STUDY AT UC BERKELEY</h3>
+                            <div class="subheading mb-3">Berkeley Global Access (BGA) Program</div>
+                            <p>I mainly study Deep Learning, Optimization Models, Artifitial Intellegence and get GPA 4.0.
+                                We propose a pre-trained 
+                                <a target="_blank" href="https://github.com/Zhouxunzhe/NST-NeuralStyleTransfer">Neural Style Transfer (NST)</a> model.
+                                I also shortly work with Prof. 
+                                <a target="_blank" href="https://people.eecs.berkeley.edu/~jiantao/">Jiantao Jiao</a> 
+                                and Dr. Baihe Huang</a>.
+                            </p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-secondary">Aug 2023 - Dec 2023</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">LARGE LANGUAGE MODELS EVALUATION</h3>
+                            <div class="subheading mb-3">School of Computer Science, Fudan University</div>
+                            <p>We propose 
+                                <a target="_blank" href="https://github.com/Zhouxunzhe/CELLO">CELLO</a> a benchmark for evaluating LLMs'
+                                ability to follow complex instructions systematically.
+                                My works include writing code for evaluators and scorers
+                                parts, creating data and evaluating LLMs.
+                                The paper has been accepted by AAAI 2024.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-secondary">Jun 2023 - Aug 2023</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">DIGITAL TWINS OF NONLINEAR DYNAMICAL SYSTEMS</h3>
+                            <div class="subheading mb-3">Academy for Engineer and Technology, Fudan University</div>
+                            <p>We study the performance of control on digital twins.
+                                Under the supervision of Prof. Leng, I construct the code of
+                                Echo State Network as the digital twins, read a lot of related
+                                papers, do experiments on the control of the digital twins and
+                                gain significant success.
+                                </p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-secondary">Sep 2022 - Now</span></div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+
+            <!-- Education-->
+            <!-- <section class="resume-section" id="education">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Education</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">FUDAN UNIVERSITY</h3>
+                            <div class="subheading mb-3">Bachelor of Science in Computer Science and Technology</div>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-secondary">Sep 2020 - Now</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">UNIVERSITY OF CALIFORNIA, BERKELEY</h3>
+                            <div class="subheading mb-3">Berkeley Global Access (BGA) Program</div>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-secondary">Fall 2023</span></div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" /> -->
+
+            <!-- Skills-->
+            <!-- <section class="resume-section" id="skills">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Skills</h2>
+                    <div class="subheading mb-3">Programming Languages & Tools</div>
+                    <ul class="list-inline dev-icons">
+                        <li class="list-inline-item"><i class="fab fa-html5"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-js-square"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-angular"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-react"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-node-js"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-sass"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-less"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-wordpress"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-gulp"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-grunt"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-npm"></i></li>
+                    </ul>
+                    <div class="subheading mb-3">Workflow</div>
+                    <ul class="fa-ul mb-0">
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Mobile-First, Responsive Design
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Cross Browser Testing & Debugging
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Cross Functional Teams
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Agile Development & Scrum
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <hr class="m-0" /> -->
+
+            <!-- Publication-->
+            <section class="resume-section" id="publication">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">publication</h2>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img class="img-fluid img-rounded" src="assets/img/2023_cello.png" alt="">
+                        </div>
+                        <div class="col-md-9">
+                            <b>	Can Large Language Models Understand Real- World Complex Instructions? </b>
+                            <br>
+                            Qianyu He, Jie Zeng, Wenhao Huang, Lina Chen, Jin Xiao, Qianxi He, <b>Xunzhe Zhou</b>, Lida Chen, Xintao Wang, Yuncheng Huang, Haoning Ye, Zihan Li, Shisong Chen, Yikai Zhang, Zhouhong Gu, Jiaqing Liang, Yanghua Xiao
+                            <br>
+                            <a target="_blank" href="https://abbey4799.github.io/publication/cello/">Project Page</a> /
+                            <a target="_blank" href="https://arxiv.org/abs/2309.09150">Paper</a> /
+                            <a target="_blank" href="https://github.com/Abbey4799/CELLO">Code</a>
+                        </div>
+                    </div>
+                    <!-- <hr> -->
+                </div>
+            </section>
+            <!-- <hr class="m-0" /> -->
+            
+            <!-- Awards-->
+            <!-- <section class="resume-section" id="awards">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Awards & Certifications</h2>
+                    <ul class="fa-ul mb-0">
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            Google Analytics Certified Developer
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            Mobile Web Specialist - Google Certification
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            1
+                            <sup>st</sup>
+                            Place - University of Colorado Boulder - Emerging Tech Competition 2009
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            1
+                            <sup>st</sup>
+                            Place - University of Colorado Boulder - Adobe Creative Jam 2008 (UI Design Category)
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            2
+                            <sup>nd</sup>
+                            Place - University of Colorado Boulder - Emerging Tech Competition 2008
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            1
+                            <sup>st</sup>
+                            Place - James Buchanan High School - Hackathon 2006
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            3
+                            <sup>rd</sup>
+                            Place - James Buchanan High School - Hackathon 2005
+                        </li>
+                    </ul>
+                </div>
+            </section> -->
+            
         </div>
-      </div>
-
-      <!-- ABOUT SECTION -->
-      <!-- 
-        TODO
-
-        - Change the subheader-text to whatever header you want
-        - Add paragraphs using the <div class="body-text"></div> elements in the "about-section-content"
-      -->
-      <div id="about-section">
-        <span class="subheader-text">My Background / About Me</span>
-        <div class="about-section-content">
-          <div class="body-text">I now study at Fudan University, Computer Science Major. I have one semester exchange experience in UC Berkeley. My research interests are Machine Learning, Reinforcement Learning. </div>
-          <div class="body-text">In my daily life, I like playing soccer and games. Feel free to contact me :)</div>
-        </div>
-      </div>
-
-      <!-- PROJECTS / MY WORK SECTION -->
-      <div id="my-work-section">
-        <!-- TODO - Change the subheader-text to whatever you want the Projects section header to say -->
-        <span class="subheader-text">My Work / My Projects</span>
-
-        <div class="projects-container">
-          <!-- 
-            TODO
-
-            This is where the project cards live. Here's a base level project card for you to copy:
-            <div class="project-card">
-              <img src="./assets/images/IMAGE_NAME" class="project-image">
-              <div class="project-card-text-container">
-                <div class="subheader-text project-title">PROJECT_NAME</div>
-                <div class="body-text project-card-text">SMALL_PROJECT_DESCRIPTION</div>
-              </div>
-              <a class="button" href="./project-pages/PROJECT_PAGE_NAME.html">
-                <span class="button-text">Read More</span>
-                <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
-              </a>
-            </div>
-
-            - To add a project to the this area, copy the above, paste it below this comment, and change the following:
-                - IMAGE_NAME: the name of the image file in assets/images
-                - PROJECT_NAME: the name of the project (keep it short, it only shows 1 line)
-                - SMALL_PROJECT_DESCRIPTION: a quick project description (max 4 lines)
-                - PROJECT_PAGE_NAME.html: the html filename for the project (must be in project-pages folder)
-          -->
-          <div class="project-card">
-            <img src="./assets/images/desktop.jpeg" class="project-image">
-            <div class="project-card-text-container">
-              <div class="subheader-text project-title"><a class="nav-title-link" href="https://arxiv.org/abs/2309.09150" target="_blank">CELLO</a></div>
-              <div class="body-text project-card-text">A benchmark for evaluating LLMs' ability to follow complex instructions systematically. This article has been accepted by AAAI 2024.</div>
-            </div>
-            <a class="button" href="./project-pages/CELLO.html">
-              <span class="button-text">Read More</span>
-              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
-            </a>
-          </div>
-          <div class="project-card">
-            <img src="./assets/images/code.jpeg" class="project-image">
-            <div class="project-card-text-container">
-              <div class="subheader-text project-title"><a class="nav-title-link" href="https://github.com/Zhouxunzhe/NST-NeuralStyleTransfer" target="_blank">NST</a></div>
-              <div class="body-text project-card-text">A Neural Style Trandfer Model implemented by fine-tuning pre-trained ViT, the structure is based on StyTR^2, UC Berkeley CS182 Project.</div>
-            </div>
-            <a class="button" href="./project-pages/NST.html">
-              <span class="button-text">Read More</span>
-              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
-            </a>
-          </div>
-          <div class="project-card">
-            <img src="./assets/images/sketchbook.jpeg" class="project-image">
-            <div class="project-card-text-container">
-              <div class="subheader-text project-title">TBD</div>
-              <div class="body-text project-card-text">Coming soon...</div>
-              <div class="body-text project-card-text">Learn more from my <a href="https://github.com/Zhouxunzhe" target="_blank">GitHub</a> Page :)</div>
-            </div>
-            <!-- <a class="button" href="./project-pages/CELLO.html">
-              <span class="button-text">Read More</span>
-              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
-            </a> -->
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- FOOTER -->
-    <div id="footer">
-      <a class="icon-link" href="https://github.com/Zhouxunzhe">
-        <image src="./assets/icons/github.svg" class="footer-icon"/>
-      </a>
-
-      <a class="icon-link" href="https://scholar.google.com/citations?user=IEi7AToAAAAJ">
-        <image src="./assets/icons/googlescholar.svg" class="footer-icon"/>
-      </a>
-
-      <a class="icon-link" href="https://www.linkedin.com/in/xunzhe-zhou/">
-        <image src="./assets/icons/linkedin.svg" class="footer-icon"/>
-      </a>
-      <!-- 
-        TODO - Change href to your Instagram account (can also delete entire "a" element if no Instagram) 
-
-        This should be the same across all pages.
-      -->
-      <a class="icon-link" target="_blank" href="https://www.instagram.com/xunzhe_zhou">
-        <image src="./assets/icons/instagram.svg" class="footer-icon"/>
-      </a>
-      <!-- 
-        TODO - Change href to your Twitter account (can also delete entire "a" element if no Twitter) 
-      
-        This should be the same across all pages.
-      -->
-      <a class="icon-link" target="_blank" href="https://twitter.com/xunzhe_zhou">
-        <image src="./assets/icons/twitter.svg" class="footer-icon"/>
-      </a>
-      <!-- 
-        TODO - Change the email after "mailto" to your contact email 
-      
-        This should be the same across all pages.
-      -->
-      <a class="icon-link" href="mailto:xunzhe_zhou@gmail.com">
-        <image src="./assets/icons/mail.svg" class="footer-icon"/>
-      </a>
-    </div>
-
-	</body>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
 </html>
