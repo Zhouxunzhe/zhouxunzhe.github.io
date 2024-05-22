@@ -2,26 +2,82 @@
 <html lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
     <title>Xunzhe Zhou's Homepage</title>
-
     <meta name="author" content="Xunzhe Zhou">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        /* background-color: #f4f4f4; */
+      }
+      .name {
+        text-align: center;
+        font-size: x-large;
+        margin-bottom: 0;
+      }
+      table {
+        width: 100%;
+        max-width: 800px;
+        border: 0;
+        border-spacing: 0;
+        border-collapse: separate;
+        margin: auto;
+      }
+      td {
+        padding: 2.5%;
+      }
+      img {
+        width: 100%;
+        max-width: 100%;
+        object-fit: cover;
+        /* border-radius: 50%; */
+      }
+      .hoverZoomLink {
+        transition: transform 0.3s;
+      }
+      .hoverZoomLink:hover {
+        transform: scale(1.05);
+      }
+      h2 {
+        /* text-align: center; */
+      }
+      p {
+        /* text-align: center; */
+      }
+      a {
+        color: #007BFF;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      .papertitle {
+        font-weight: bold;
+      }
+      .highlight {
+        background-color: yellow;
+      }
+      .news, .research, .projects {
+        padding: 20px;
+      }
+      .footer {
+        /* text-align: center; */
+        font-size: small;
+        margin-top: 20px;
+      }
+    </style>
   </head>
-
   <body>
-    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-      <tr style="padding:0px">
-        <td style="padding:0px">
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr style="padding:0px">
-              <td style="padding:2.5%;width:63%;vertical-align:middle">
-                <p class="name" style="text-align: center; font-size: x-large; margin-bottom: 0%;">
-                  Xunzhe Zhou
-                </p>
+    <table>
+      <tr>
+        <td>
+          <table>
+            <tr>
+              <td style="width: 63%; vertical-align: middle;">
+                <p class="name">Xunzhe Zhou</p>
                 <p>
                   I am an undergraduate student at <a href="https://www.fudan.edu.cn/en/">Fudan University</a> studying for B.S. in Computer Science.
                 </p>
@@ -41,161 +97,77 @@
                   <a href="mailto:xunzhe_zhou@outlook.com">Email</a> &nbsp;/&nbsp;
                   <a href="./assets/files/CV_202404.pdf">CV</a> &nbsp;/&nbsp;
                   <a href="https://github.com/Zhouxunzhe">GitHub</a> &nbsp;/&nbsp;
-                  <!-- <a href="data/JonBarron-bio.txt">Bio</a> &nbsp;/&nbsp; -->
                   <a href="https://scholar.google.com/citations?user=IEi7AToAAAAJ&hl=en">Scholar</a> &nbsp;/&nbsp;
-				  <!-- <a href="https://www.threads.net/@jonbarron">Threads</a> &nbsp;/&nbsp; -->
-				  <!-- <a href="https://bsky.app/profile/jonbarron.bsky.social">Bluesky</a> &nbsp;/&nbsp; -->
-                  <a href="https://www.linkedin.com/in/xunzhe-zhou/">LiknedIn</a> &nbsp;/&nbsp;
+                  <a href="https://www.linkedin.com/in/xunzhe-zhou/">LinkedIn</a> &nbsp;/&nbsp;
                   <a href="https://twitter.com/ZHOUxzhe">Twitter</a>
                 </p>
               </td>
-              <td style="padding:2.5%;width:40%;max-width:40%">
-                <a href="assets/img/LA.jpg"><img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="assets/img/LA.jpg" class="hoverZoomLink"></a>
-                <!-- <a href="assets/img/LA.jpg"><img style="width:100%;max-width:100%;object-fit: cover;" alt="profile photo" src="assets/img/LA.jpg" class="hoverZoomLink"></a> -->
-                <!-- <a href="assets/img/robot.jpg"><img style="width:100%;max-width:100%;object-fit: cover;" alt="profile photo" src="assets/img/robot.jpg" class="hoverZoomLink"></a> -->
+              <td style="width: 40%; max-width: 40%;">
+                <a href="assets/img/LA.jpg">
+                  <img alt="profile photo" src="assets/img/LA.jpg" style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" class="hoverZoomLink">
+                </a>
               </td>
             </tr>
-          </tbody></table>
+          </table>
 
-          <!-------------------------------------------------------------------------------------------------------------------->
+          <div class="news">
+            <h2>News</h2>
+            <p>[Dec. 2023] Our paper <strong>CELLO</strong> is accepted by AAAI 2024!</p>
+          </div>
 
-          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
-            <tr>
-              <td>
-                <h2>News</h2>
-
-                <p>
-                  [Dec. 2023] Our paper <strong>CELLO</strong> is accepted by AAAI 2024!
-                </p>
-                
-              </td>
-            </tr>
-          </tbody></table>
-
-
-          <!-------------------------------------------------------------------------------------------------------------------->
-
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <div class="research">
+            <h2>Research</h2>
+            <p>
+              I'm interested in task and motion planning. My research is about understanding complex real world and learning lifelong skills. Representative papers are <span class="highlight">highlighted</span>.
+            </p>
+            <table>
               <tr>
-              <td style="padding:20px;width:100%;vertical-align:middle">
-                <h2>Research</h2>
-                <p>
-                  I'm interested in task and motion planning. My research is about understanding complex real wolrd and learning lifelong skills. Representative papers are <span class="highlight">highlighted</span>.
-                </p>
-              </td>
-            </tr>
-          </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+                <td style="width: 30%; vertical-align: middle;">
+                  <img src="assets/img/2024_rc.png" alt="RC" width="200">
+                </td>
+                <td style="width: 70%; vertical-align: middle;">
+                  <a><strong><span class="papertitle">Reservoir computing as digital twins for controlling nonlinear dynamical systems</span></strong></a><br>
+                  R. Cao*, <strong>Xunzhe Zhou*</strong>, J. Hou, C. Guan, S. Leng<br>
+                  <em>submitted to Information Sciences</em>, 2024<br>
+                  <a href="assets/abstract/2024_rc.txt">abstract</a>
+                  <p>We validate the effectiveness of our digital twins in replicating unknown complex systems and further demonstrate how to select and implement appropriate control strategies based on the specific requirements.</p>
+                </td>
+              </tr>
+              <tr bgcolor="#ffffd0">
+                <td style="width: 30%; vertical-align: middle;">
+                  <img src="./assets/img/2023_cello.png" alt="CELLO" width="200">
+                </td>
+                <td style="width: 70%; vertical-align: middle;">
+                  <a><strong><span class="papertitle">Can Large Language Models Understand Real-World Complex Instructions?</span></strong></a><br>
+                  Q. He, J. Zeng, W. Huang, L. Chen, J. Xiao, Q. He, <strong>Xunzhe Zhou</strong>, L. Chen, X. Wang, Y. Huang, H. Ye, Z. Li, S. Chen, Y. Zhang, Z. Gu, J. Liang, Y. Xiao<br>
+                  <em>AAAI</em>, 2024<br>
+                  <a href="https://abbey4799.github.io/publication/cello/">project page</a> / <a href="assets/abstract/2023_cello.txt">abstract</a> / <a href="https://arxiv.org/abs/2309.09150">paper</a> / <a href="https://github.com/Abbey4799/CELLO">code</a> / <a href="assets/bibtex/2023_cello.bib">bibtex</a> / <a href="https://underline.io/lecture/92662-can-large-language-models-understand-real-world-complex-instructionsquestion">video</a>
+                  <p>We propose CELLO, a benchmark for evaluating LLMs' ability to follow complex instructions. We design eight features for complex instructions and construct a comprehensive evaluation dataset from real-world scenarios. We also establish four criteria and corresponding metrics.</p>
+                </td>
+              </tr>
+            </table>
+          </div>
 
+          <div class="projects">
+            <h2>Selected Projects</h2>
+            <table>
+              <tr>
+                <td style="width: 30%; vertical-align: middle;">
+                  <img src="assets/img/2023_nst.png" alt="NST" width="200">
+                </td>
+                <td style="width: 70%; vertical-align: middle;">
+                  <a><strong><span class="papertitle">Neural Style Transfer Based on Fine Tuning Vision Transformer</span></strong></a><br>
+                  <em>UC Berkeley CS182/282A course project</em>, 2023<br>
+                  <a href="https://github.com/Zhouxunzhe/NST-NeuralStyleTransfer">project page</a> / <a href="assets/files/NST.pdf">essay</a> / <a href="https://github.com/Zhouxunzhe/NST-NeuralStyleTransfer">code</a>
+                  <p>Inspired by StyTr<sup>2</sup>, we replace its content and style encoders with pretrained ViT models. We propose a two-stage training strategy and wrap the ViTs with LoRA for joint training.</p>
+                </td>
+              </tr>
+            </table>
+          </div>
 
-            <tr>
-              <td style="padding:20px;width:30%;vertical-align:middle">
-                <img src="assets/img/2024_rc.png" alt="RC" width="200" style="border-style: none">
-              </td>
-              <td style="padding:20px;width:70%;vertical-align:middle">
-                <a>
-                  <strong><span class="papertitle">Reservoir computing as digital twins for controlling nonlinear dynamical systems</span></strong>
-                </a>
-                <br>
-                R. Cao*, <strong>Xunzhe Zhou*</strong>, J. Hou, C. Guan, S. Leng
-                <br>
-                <em>submitted to Information Sciences</em>, 2024
-                <br>
-                <a href="assets/abstract/2024_rc.txt">abstract</a>
-                <p></p>
-                <p>We validate the effectiveness of our digital twins in replicating unknown complex systems and further demonstrate how to select and implement appropriate control strategies based on the specific requirements.</p>
-                <!-- <p>This work is accepted by Information Siences.</p> -->
-              </td>
-            </tr>
-
-            <tr bgcolor="#ffffd0" onmouseout="defocus_stop()" onmouseover="defocus_start()">
-              <td style="padding:20px;width:30%;vertical-align:middle">
-                <!-- <div id='lens_blurry' class='hidden'><img src="images/BarronCVPR2015_anim.gif"></div>
-                <div id='lens_sharp'>
-                  <a href="images/BarronCVPR2015_anim.gif"><img src="images/BarronCVPR2015_still.jpg"></a>
-                </div> -->
-                <img src="./assets/img/2023_cello.png" alt="CELLO" width="200" style="border-style: none">
-                <script type="text/javascript">
-                  function defocus_start() {
-                    document.getElementById('lens_blurry').style.display = 'inline';
-                    document.getElementById('lens_sharp').style.display = 'none';
-                  }
-
-                  function defocus_stop() {
-                    document.getElementById('lens_blurry').style.display = 'none';
-                    document.getElementById('lens_sharp').style.display = 'inline';
-                  }
-                  defocus_stop()
-                </script>
-              </td>
-              <td style="padding:20px;width:70%;vertical-align:middle">
-                <a>
-                  <strong><span class="papertitle">Can Large Language Models Understand Real-World Complex Instructions?</span></strong>
-                </a>
-                <br>
-                Q. He, J. Zeng, W. Huang, L. Chen, J. Xiao, Q. He, <strong>Xunzhe Zhou</strong>, L. Chen, X. Wang, Y. Huang, H. Ye, Z. Li, S. Chen, Y. Zhang, Z. Gu, J. Liang, Y. Xiao
-                <br>
-                <em>AAAI</em>, 2024 &nbsp <!--font color="red"><strong>(Oral Presentation)</strong></font-->
-                <br>
-                <a href="https://abbey4799.github.io/publication/cello/">project page</a> /
-                <a href="assets/abstract/2023_cello.txt">abstract</a> /
-                <a href="https://arxiv.org/abs/2309.09150">paper</a> /
-                <a href="https://github.com/Abbey4799/CELLO">code</a> /
-                <a href="assets/bibtex/2023_cello.bib">bibtex</a> /
-                <a href="https://underline.io/lecture/92662-can-large-language-models-understand-real-world-complex-instructionsquestion">video</a>
-                <p></p>
-                <p>We propose CELLO, a benchmark for evaluating LLMs' ability to follow complex instructions. We design eight features for complex instructions and construct a comprehensive evaluation dataset from real-world scenarios. We also establish four criteria and corresponding metrics.</p>
-                <!-- <p>This work is accepted by AAAI 2024.</p> -->
-              </td>
-            </tr>
-
-          </tbody></table>
-
-          <!-------------------------------------------------------------------------------------------------------------------->
-
-          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
-            <tr>
-              <td>
-                <h2>Selected Projects</h2>
-              </td>
-            </tr>
-          </tbody></table>
-          <table width="100%" align="center" border="0" cellpadding="20"><tbody>
-            
-            <tr>
-              <td style="padding:20px;width:30%;vertical-align:middle">
-                <img src="assets/img/2023_nst.png" alt="NST" width="200" style="border-style: none">
-              </td>
-              <td style="padding:20px;width:70%;vertical-align:middle">
-                <a>
-                  <strong><span class="papertitle">Neural Style Transfer Based on Fine Tuning Vision Transformer</span></strong>
-                </a>
-                <br>
-                <em>UC Berkeley CS182/282A course project</em>, 2023
-                <br>
-                <a href="https://github.com/Zhouxunzhe/NST-NeuralStyleTransfer">project page</a> /
-                <a href="assets/files/NST.pdf">essay</a> /
-                <a href="https://github.com/Zhouxunzhe/NST-NeuralStyleTransfer">code</a>
-                <p></p>
-                <p>Inspired by StyTr<sup>2</sup>, we replace its content and style encoders with pretrained ViT models. We propose a two-stage training strategy and wrap the ViTs with LoRA for joint training.</p>
-                <!-- <p>This project got 10.0/10.0 in CS182/282A.</p> -->
-              </td>
-            </tr>
-            
-          </tbody></table>
-
-          <!-------------------------------------------------------------------------------------------------------------------->
-
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:0px">
-                <br>
-                <p style="text-align:center;font-size:small;">
-                  Design and source code from <a href="https://github.com/jonbarron/jonbarron_website">Jon Barron's website</a>.
-                </p>
-              </td>
-            </tr>
-          </tbody></table>
+          <div class="footer">
+            <p>Design and source code from <a href="https://github.com/jonbarron/jonbarron_website">Jon Barron's website</a>.</p>
+          </div>
         </td>
       </tr>
     </table>
