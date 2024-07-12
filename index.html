@@ -6,6 +6,7 @@
     <meta name="author" content="Xunzhe Zhou">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
     <style>
       body {
         font-family: Arial, sans-serif;
@@ -15,7 +16,7 @@
       }
       .name {
         text-align: center;
-        font-size: x-large;
+        font-size: xx-large;
         margin-bottom: 0;
       }
       table {
@@ -60,8 +61,8 @@
       .highlight {
         background-color: yellow;
       }
-      .news, .research, .projects {
-        padding: 20px;
+      .news, .research, .publications, .projects {
+        padding: 14px;
       }
       .footer {
         /* text-align: center; */
@@ -76,22 +77,16 @@
         <td>
           <table>
             <tr>
-              <td style="width: 63%; vertical-align: middle;">
+              <td style="width: 60%; vertical-align: middle;">
                 <p class="name">Xunzhe Zhou</p>
                 <p>
-                  I am an undergraduate student at <a href="https://www.fudan.edu.cn/en/">Fudan University</a> studying for B.S. in Computer Science.
+                  I am an undergraduate student at <a href="https://www.fudan.edu.cn/en/">Fudan University</a>, pursuing my Bachelor's degree in Computer Science and Technology.
                 </p>
                 <p>
-                  I recently work on robot task planning with Prof. 
-                  <a href="https://faculty.fudan.edu.cn/xyxue/zh_CN/index.htm">Xiangyang Xue</a>.
-                  I also work closely with Prof. 
-                  <a href="http://kw.fudan.edu.cn/people/xiaoyanghua/">Yanghua Xiao</a> studying large language models evaluation, 
-                  and Prof. <a href="https://faculty.fudan.edu.cn/syleng/zh_CN/index.htm">Siyang Leng</a>
-                  studying digital twins of dynamical systems.
+                  Recently, I have been working with Prof. <a href="https://linsats.github.io/">Lin Shao</a> on embodied task planning. Previously, I collaborated with Prof. <a href="https://faculty.fudan.edu.cn/xyxue/zh_CN/index.htm">Xiangyang Xue</a> and Prof. <a href="https://yanweifu.github.io/">Yanwei Fu</a> on research involving embodied spatial perception and planning. I also worked with Prof. <a href="http://kw.fudan.edu.cn/people/xiaoyanghua/">Yanghua Xiao</a> on studying LLMs' instruction following capabilities, and with Prof. <a href="https://faculty.fudan.edu.cn/syleng/zh_CN/index.htm">Siyang Leng</a> on nonlinear dynamical systems control.
                 </p>
                 <p>
-                  I have also spent a wonderful semester at <a href="https://www.berkeley.edu/">UC Berkeley</a> 
-                  at fall 2023, studying reinforcement learning, deep learning, optimization models, and artificial intelligence.
+                  I also had a wonderful semester at the <a href="https://www.berkeley.edu/">UC Berkeley</a> at fall 2023, where I studied reinforcement learning, deep learning, optimization models, and artificial intelligence.
                 </p>
                 <p style="text-align:center">
                   <a href="mailto:xunzhe_zhou@outlook.com">Email</a> &nbsp;/&nbsp;
@@ -103,8 +98,8 @@
                 </p>
               </td>
               <td style="width: 40%; max-width: 40%;">
-                <a href="assets/img/LA.jpg">
-                  <img alt="profile photo" src="assets/img/LA.jpg" style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" class="hoverZoomLink">
+                <a href="assets/img/profile.jpg">
+                  <img alt="profile photo" src="assets/img/profile.jpg" style="width:100%;max-width:100%;object-fit: cover; border-radius: 60%;" class="hoverZoomLink">
                 </a>
               </td>
             </tr>
@@ -118,7 +113,21 @@
           <div class="research">
             <h2>Research</h2>
             <p>
-              I'm interested in task and motion planning. My research is about understanding complex real world and learning lifelong skills. Representative papers are <span class="highlight">highlighted</span>.
+              My ultimate goal is to achieve fully automated general embodied intelligence systems. 
+            </p>
+            <p>
+              My current research interests focus on leveraging existing foundational models to assist robots in the physical world with perception and decision-making. Specifically, 1) I aim to develop a general perception system to understand complex and dynamic environments; 2) I seek to create a decision-making systems for autonomous long-term task planning.
+            </p>
+            <p>
+              In the future, I plan to continue my research work by 1) developing a universal learning system for heterogeneous robots to learn unified skills, 2) creating a data collection system in various tasks and different scenarios, and 3) building a multi-robot collaboration system to enhance overall efficiency and learning capabilities.
+            </p>
+          </div>
+
+          <div class="publications">
+            <h2>Publications</h2>
+            <p>
+              <!-- Representative papers are <span class="highlight">highlighted</span>.  -->
+              * denotes equal contribution.
             </p>
             <table>
               <tr>
@@ -128,12 +137,13 @@
                 <td style="width: 70%; vertical-align: middle;">
                   <a><strong><span class="papertitle">Reservoir computing as digital twins for controlling nonlinear dynamical systems</span></strong></a><br>
                   R. Cao*, <strong>Xunzhe Zhou*</strong>, J. Hou, C. Guan, S. Leng<br>
-                  <em>submitted to Information Sciences</em>, 2024<br>
+                  <em>In submission</em>, 2024<br>
                   <a href="assets/abstract/2024_rc.txt">abstract</a>
                   <p>We validate the effectiveness of our digital twins in replicating unknown complex systems and further demonstrate how to select and implement appropriate control strategies based on the specific requirements.</p>
                 </td>
               </tr>
-              <tr bgcolor="#ffffd0">
+              <!-- <tr bgcolor="#ffffd0"> -->
+              <tr>
                 <td style="width: 30%; vertical-align: middle;">
                   <img src="./assets/img/2023_cello.png" alt="CELLO" width="200">
                 </td>
