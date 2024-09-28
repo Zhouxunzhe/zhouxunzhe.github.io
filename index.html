@@ -108,7 +108,7 @@
   </head>
   <body>
     <button class="theme-toggle" id="theme-toggle">
-      <img src="assets/icon/moon.svg" id="theme-icon" alt="Toggle Theme">
+      <img src="assets/icon/sun.svg" id="theme-icon" alt="Toggle Theme">
     </button>
     <table>
       <tr>
@@ -246,7 +246,7 @@
         });
   
         const themeIcon = document.getElementById('theme-icon');
-        themeIcon.src = currentTheme === 'dark-mode' ? 'assets/icon/sun.svg' : 'assets/icon/moon.svg';
+        themeIcon.src = currentTheme === 'dark-mode' ? 'assets/icon/moon.svg' : 'assets/icon/sun.svg';
   
         const themeToggleButton = document.getElementById('theme-toggle');
   
@@ -257,7 +257,7 @@
           const newTheme = document.body.classList.contains('dark-mode') ? 'dark-mode' : 'light-mode';
           localStorage.setItem('theme', newTheme);
   
-          themeIcon.src = newTheme === 'dark-mode' ? 'assets/icon/sun.svg' : 'assets/icon/moon.svg';
+          themeIcon.src = newTheme === 'dark-mode' ? 'assets/icon/moon.svg' : 'assets/icon/sun.svg';
           themeIcon.style.transform = 'rotate(360deg)';
           setTimeout(() => themeIcon.style.transform = '', 300);
         });
@@ -268,7 +268,7 @@
           document.body.classList.remove(event.matches ? 'light-mode' : 'dark-mode');
           localStorage.setItem('theme', newTheme);
   
-          themeIcon.src = newTheme === 'dark-mode' ? 'assets/icon/sun.svg' : 'assets/icon/moon.svg';
+          themeIcon.src = newTheme === 'dark-mode' ? 'assets/icon/moon.svg' : 'assets/icon/sun.svg';
         });
       </script>
   </body>
