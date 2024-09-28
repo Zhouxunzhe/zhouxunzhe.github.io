@@ -12,7 +12,15 @@
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
-        /* background-color: #f4f4f4; */
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+      body.light-mode {
+        background-color: #FFFFFF;
+        color: #000;
+      }
+      body.dark-mode {
+        background-color: #1F1F1F;
+        color: #FFFFFF;
       }
       .name {
         text-align: center;
@@ -44,9 +52,37 @@
       a {
         color: #007BFF;
         text-decoration: none;
+        transition: color 0.3s ease;
+      }
+      body.dark-mode a {
+        color: #80CFFF;
       }
       a:hover {
-        text-decoration: underline;
+        animation: link-hover 0.3s ease forwards;
+      }
+      @keyframes link-hover {
+        from {
+          color: inherit;
+          text-decoration: underline;
+        }
+        to {
+          color: #f09228;
+          text-decoration: underline;
+        }
+      }
+      body.dark-mode a:hover {
+        animation: link-hover-dark 0.3s ease forwards;
+      }
+
+      @keyframes link-hover-dark {
+        from {
+          color: inherit;
+          text-decoration: underline;
+        }
+        to {
+          color: #FFD700;
+          text-decoration: underline;
+        }
       }
       .news, .research, .publications, .projects {
         padding: 14px;
@@ -55,9 +91,25 @@
         font-size: small;
         margin-top: 20px;
       }
+      .theme-toggle {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+      }
+      .theme-toggle img {
+        width: 40px;
+        height: 40px;
+        transition: transform 0.3s ease;
+      }
     </style>
   </head>
   <body>
+    <button class="theme-toggle" id="theme-toggle">
+      <img src="assets/icon/moon.svg" id="theme-icon" alt="Toggle Theme">
+    </button>
     <table>
       <tr>
         <td>
@@ -69,7 +121,7 @@
                   I am an undergraduate student at <a href="https://www.fudan.edu.cn/en/">Fudan University</a>, pursuing my Bachelor's degree in Computer Science and Technology.
                 </p>
                 <p>
-                  Recently, I have been working with Prof. <a href="https://linsats.github.io/">Lin Shao</a> on embodied task planning. Previously, I collaborated with Prof. <a href="https://faculty.fudan.edu.cn/xyxue/zh_CN/index.htm">Xiangyang Xue</a> and Prof. <a href="https://yanweifu.github.io/">Yanwei Fu</a> on research involving embodied spatial perception and planning. I also worked with Prof. <a href="http://kw.fudan.edu.cn/people/xiaoyanghua/">Yanghua Xiao</a> on studying LLMs' instruction following capabilities, and with Prof. <a href="https://faculty.fudan.edu.cn/syleng/zh_CN/index.htm">Siyang Leng</a> on nonlinear dynamical systems control.
+                  Recently, I have been an intern at <a href="https://www.comp.nus.edu.sg/">NUS</a> working with Prof. <a href="https://linsats.github.io/">Lin Shao</a> studying robotic task and motion planning. Previously, I collaborated with Prof. <a href="https://faculty.fudan.edu.cn/xyxue/zh_CN/index.htm">Xiangyang Xue</a> and Prof. <a href="https://yanweifu.github.io/">Yanwei Fu</a> on constructing a mobile manipulation system with 3D reconstruction and vision-language models. I also worked with Prof. <a href="http://kw.fudan.edu.cn/people/xiaoyanghua/">Yanghua Xiao</a> on studying LLMs' hard-constraint instruction following capabilities, and with Prof. <a href="https://faculty.fudan.edu.cn/syleng/zh_CN/index.htm">Siyang Leng</a> on nonlinear dynamical systems control.
                 </p>
                 <p>
                   I also had a wonderful semester at the <a href="https://www.berkeley.edu/">UC Berkeley</a> during fall 2023, where I studied reinforcement learning, deep learning, optimization models, and artificial intelligence, with GPA 4.00 / 4.00.
@@ -84,8 +136,8 @@
                 </p>
               </td>
               <td style="width: 40%; max-width: 40%;">
-                <a href="assets/img/profile.jpg">
-                  <img alt="profile photo" src="assets/img/profile.jpg" style="width:100%;max-width:100%;object-fit: cover; border-radius: 60%;" class="hoverZoomLink">
+                <a href="assets/img/berkeley.jpg">
+                  <img alt="profile photo" src="assets/img/berkeley.jpg" style="width:100%;max-width:100%;object-fit: cover;" class="hoverZoomLink">
                 </a>
               </td>
             </tr>
@@ -147,17 +199,29 @@
           <div class="projects">
             <h2>Selected Projects</h2>
             <table>
-              <tr>
-                <td style="width: 30%; vertical-align: middle;">
-                  <img src="assets/img/2023_nst.png" alt="NST" width="200">
-                </td>
-                <td style="width: 70%; vertical-align: middle;">
-                  <a><strong><span class="papertitle">Neural Style Transfer Based on Fine Tuning Vision Transformer</span></strong></a><br>
-                  <em>UC Berkeley CS182/282A course project</em>, 2023<br>
-                  <a href="https://github.com/Zhouxunzhe/NST-NeuralStyleTransfer">project page</a> / <a href="assets/files/NST.pdf">essay</a> / <a href="https://github.com/Zhouxunzhe/NST-NeuralStyleTransfer">code</a>
-                  <p>Inspired by StyTr<sup>2</sup>, we replace its content and style encoders with pretrained ViT models. We propose a two-stage training strategy and wrap the ViTs with LoRA for joint training.</p>
-                </td>
-              </tr>
+                <tr>
+                    <td style="width: 30%; vertical-align: middle;">
+                    <img src="assets/img/2024_tamma.gif" alt="NST" width="200">
+                    </td>
+                    <td style="width: 70%; vertical-align: middle;">
+                    <a><strong><span class="papertitle">Target-driven Multi-subscene Mobile Manipulation</span></strong></a><br>
+                    <!-- Participate in the system construction.</br> -->
+                    Contribute to the system construction. Paper authored by Hou et al. is accepted by <em>CoRL</em>, 2024<br>
+                    <a href="https://jarvishou829.github.io/TaMMa/">project page</a> / <a href="assets/abstract/2024_tamma.txt">abstract</a> / <a href="https://openreview.net/forum?id=EiqQEsOMZt&referrer=%5Bthe%20profile%20of%20Yanwei%20Fu%5D(%2Fprofile%3Fid%3D~Yanwei_Fu2)">paper</a> / <a>code (coming soon)</a>
+                    <p>This project is a multi-subscene mobile manipulation approach. Coarse scene prior and refined pose estimation empower the mobile base movement and robotic arm manipulation effectively. I mainly participate in the preliminary work of this project.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 30%; vertical-align: middle;">
+                    <img src="assets/img/2023_nst.png" alt="NST" width="200">
+                    </td>
+                    <td style="width: 70%; vertical-align: middle;">
+                    <a><strong><span class="papertitle">Neural Style Transfer Based on Fine Tuning Vision Transformer</span></strong></a><br>
+                    <em>UC Berkeley CS182/282A course project</em>, 2023<br>
+                    <a href="https://github.com/Zhouxunzhe/NST-NeuralStyleTransfer">project page</a> / <a href="assets/files/NST.pdf">essay</a> / <a href="https://github.com/Zhouxunzhe/NST-NeuralStyleTransfer">code</a>
+                    <p>Inspired by StyTr<sup>2</sup>, we replace its content and style encoders with pretrained ViT models. We propose a two-stage training strategy and wrap the ViTs with LoRA for joint training.</p>
+                    </td>
+                </tr>
             </table>
           </div>
 
@@ -167,5 +231,45 @@
         </td>
       </tr>
     </table>
+
+    <script>
+        const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const currentTheme = localStorage.getItem('theme') ||
+          (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark-mode' : 'light-mode');
+        document.documentElement.classList.add(currentTheme);
+        document.documentElement.style.backgroundColor = currentTheme === 'dark-mode' ?  '#1F1F1F': '#FFFFFF';
+        
+        document.documentElement.style.visibility = 'hidden';
+        window.addEventListener('load', () => {
+          document.body.classList.add(currentTheme);
+          document.documentElement.style.visibility = 'visible';
+        });
+  
+        const themeIcon = document.getElementById('theme-icon');
+        themeIcon.src = currentTheme === 'dark-mode' ? 'assets/icon/sun.svg' : 'assets/icon/moon.svg';
+  
+        const themeToggleButton = document.getElementById('theme-toggle');
+  
+        themeToggleButton.addEventListener('click', () => {
+          document.body.classList.toggle('dark-mode');
+          document.body.classList.toggle('light-mode');
+  
+          const newTheme = document.body.classList.contains('dark-mode') ? 'dark-mode' : 'light-mode';
+          localStorage.setItem('theme', newTheme);
+  
+          themeIcon.src = newTheme === 'dark-mode' ? 'assets/icon/sun.svg' : 'assets/icon/moon.svg';
+          themeIcon.style.transform = 'rotate(360deg)';
+          setTimeout(() => themeIcon.style.transform = '', 300);
+        });
+  
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+          const newTheme = event.matches ? 'dark-mode' : 'light-mode';
+          document.body.classList.add(newTheme);
+          document.body.classList.remove(event.matches ? 'light-mode' : 'dark-mode');
+          localStorage.setItem('theme', newTheme);
+  
+          themeIcon.src = newTheme === 'dark-mode' ? 'assets/icon/sun.svg' : 'assets/icon/moon.svg';
+        });
+      </script>
   </body>
 </html>
