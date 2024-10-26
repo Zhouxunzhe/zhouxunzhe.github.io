@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Neural Style Transfer Based on Fine Tuning Vision Transformer</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Neural Style Transfer Based on Fine Tuning Vision Transformer</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://zhouxunzhe.github.io">Xunzhe Zhou</a>, 
+              </span>
+              <span class="author-block">
+                <a>Yisi Liu</a>, 
+              </span>
+              <span class="author-block">
+                <a>Yujie Zhao</a>, 
+              </span>
+              <span class="author-block">
+                <a>Yuanteng Chen</a>, 
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">University of California, Berkeley
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- Supplementary PDF link -->
+                <span class="link-block">
+                  <a href="../files/paper/nst.pdf"
+                  class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+
+                <!-- Github link -->
+                <span class="link-block">
+                  <a href="https://github.com/Zhouxunzhe/NST-NeuralStyleTransfer"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Teaser image-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="../img/web_img/nst/architecture.png">
+      <br>
+    </div>
+  </div>
+</section>
+<!-- End teaser image -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            To improve the model perfomance in Neural Style Transfer (NST) tasks, we replaced the content and style encoders of StyTr<sup>2</sup> with pre-trained ViT. Restricted by practical computation limitations, we leveraged a two-stage training strategy: we first froze the pre-trained ViT, just trained the decoders. Then we wrapped LoRA to fine-tune ViT with COCO datasets for joint training. By conducting extensive experiments, our contributions include:
+            1) Better image quality: through the incorporation of pretrained models and LoRA, our model performs better than other baselines in terms of both content loss and style loss, with the style loss nearly half of the baselines.
+            2) Less training computation: the two-stage training strategy reduces the required training computation significantly, only less than half of the training computation required by the original StyTr<sup>2</sup> model.
+            3) Comprehensive ablation study: we have tried different sets of hyperparameters to explore how LoRA and the pretrained model configuration affect the model performance.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Overview -->
+<section class="hero" >
+  <div class="hero-body">
+    <div class="container is-max-widescreen">
+      <div class="is-centered has-text-centered">
+        <h2 class="title is-3">Generated Images Results</h2>
+        <div class="vertical-images" style="max-width: 90%; margin: 0 auto;">
+          <img src="../img/web_img/nst/comparison.png" alt="comparison" style="height: 650px; width: auto; object-fit: cover;"/>
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            <b>A comparison of generated images.</b> To make the illustration easier, all images are resized into the same smaller size after image generation. Note that in the 4th row, where a large content image (3*1600*1064) of the Berkeley campus and a style of the Foxes are chosen, our model performs significantly better than other models, preserving the content details best and with a clear style.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End overview -->
+
+<!-- image carousel -->
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-widescreen">
+      <div class="field is-centered has-text-centered">
+        <h2 class="title is-3">Visualization of Training Loss</h2>
+        <div class="control is-flex is-justify-content-center" style="margin-bottom: 30px;">
+          <div class="select is-rounded is-link">
+            <select id="imageSelect">
+              <option value="content_stage1">Content Training Loss of Stage 1</option>
+              <option value="content_stage2">Content Training Loss of Stage 2</option>
+              <option value="style_stage1">Style Training Loss of Stage 1</option>
+              <option value="style_stage2">Style Training Loss of Stage 2</option>
+              <option value="total_stage1">Total Training Loss of Stage 1</option>
+              <option value="total_stage2">Total Training Loss of Stage 2</option>
+            </select>
+          </div>
+        </div>
+        <div id="image-container" style="display: flex; justify-content: center; align-items: center;">
+          <img id="imagePlayer" src="../img/web_img/nst/content_stage1.png" style="height: 400px; width: auto; object-fit: cover;"/>
+        </div>
+        <script>
+          const imageSelect = document.getElementById('imageSelect');
+          const imagePlayer = document.getElementById('imagePlayer');
+
+          imageSelect.addEventListener('change', function() {
+            const selectedOption = imageSelect.value;
+            if (selectedOption === 'content_stage1') {
+              imagePlayer.src = '../img/web_img/nst/content_stage1.png';
+            } else if (selectedOption === 'content_stage2') {
+              imagePlayer.src = '../img/web_img/nst/content_stage2.png';
+            } else if (selectedOption === 'style_stage1') {
+              imagePlayer.src = '../img/web_img/nst/style_stage1.png';
+            } else if (selectedOption === 'style_stage2') {
+              imagePlayer.src = '../img/web_img/nst/style_stage2.png';
+            } else if (selectedOption === 'total_stage1') {
+              imagePlayer.src = '../img/web_img/nst/total_stage1.png';
+            } else if (selectedOption === 'total_stage2') {
+              imagePlayer.src = '../img/web_img/nst/total_stage2.png';
+            }
+            imagePlayer.load();
+          });
+        </script>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End image carousel -->
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page. This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

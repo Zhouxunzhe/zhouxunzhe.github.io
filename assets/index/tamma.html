@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Mobile Manipulation Based on Semantic 3D Reconstruction and VLMs</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Mobile Manipulation Based on Semantic 3D Reconstruction and VLMs</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a>Jiawei Hou</a>, 
+              </span>
+              <span class="author-block">
+                <a href="https://zhouxunzhe.github.io">Xunzhe Zhou</a>, 
+              </span>
+              <span class="author-block">
+                <a>Tongying Pan</a>, 
+              </span>
+              <span class="author-block">
+                <a>Jie Zhang</a>, 
+              </span>
+              <span class="author-block">
+                <a>Shanshan Li</a>, 
+              </span>
+              <span class="author-block">
+                <a>Junyu Lin</a>, 
+              </span>
+              <span class="author-block">
+                <a>Kuanning Wang</a>, 
+              </span>
+              <span class="author-block">
+                <a>Jingshun Huang</a>, 
+              </span>
+              <span class="author-block">
+                <a>Yanwei Fu</a>, 
+              </span>
+              <span class="author-block">
+                <a>Xiangyang Xue</a>, 
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Fudan University
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- Github link -->
+                <span class="link-block">
+                  <a
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code(Soon)</span>
+                  </a>
+                </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <source src="../img/web_img/tamma/teaser.mp4"
+        type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        Aiming to build a service robot with generalizability in daily life scenarios, we constructed a mobile manipulation system with a robot assembled with Franka Panda arm and Hermes mobile base. 
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            For everyday service robotics, the ability to navigate back and forth based on tasks in multi-subscene environments and perform delicate manipulations is crucial and highly practical. While existing robotics primarily focus on complex tasks within a single scene or simple tasks across scalable scenes individually, robots consisting of a mobile base with a robotic arm face the challenge of efficiently representing multiple subscenes, coordinating the collaboration between the mobile base and the robotic arm, and managing delicate tasks in scalable environments. To address this issue, we propose Target-driven Multi-subscene Mobile Manipulation (TaMMa), which efficiently handles mobile base movement and fine-grained manipulation across subscenes. Specifically, we obtain a reliable 3D Gaussian initialization of the whole scene using a sparse 3D point cloud with encoded semantics. Through querying the coarse Gaussians, we acquire the approximate pose of the target, navigate the mobile base to approach it, and reduce the scope of precise target pose estimation to the corresponding subscene.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Overview -->
+<section class="hero" >
+  <div class="hero-body">
+    <div class="container is-max-widescreen">
+      <div class="is-centered has-text-centered">
+        <h2 class="title is-3">Semantic Navigation</h2>
+        <div class="vertical-images" style="max-width: 90%; margin: 0 auto;">
+          <video poster="" id="tree" autoplay controls muted loop height="100%" style="height: 450px; width: auto; object-fit: cover;">
+            <source src="../img/web_img/tamma/navigation.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <h2 class="subtitle has-text-centered" style="max-width: 90%; margin: 0 auto;">
+          We implemented semantic navigation with CLIP-Fields.
+        </h2>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End overview -->
+
+<!-- image carousel -->
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-widescreen">
+      <div class="field is-centered has-text-centered">
+        <h2 class="title is-3">Semantic Grasping Pose Estimation</h2>
+        <div class="control is-flex is-justify-content-center" style="margin-bottom: 30px;">
+          <div class="select is-rounded is-link">
+            <select id="imageSelect">
+              <option value="bowl">Pick Yellow Bowl</option>
+              <option value="cube">Pick Cube</option>
+              <option value="3d_grasp">Grasping Pose Estimation</option>
+              <option value="3d">3D Reconstruction</option>
+            </select>
+          </div>
+        </div>
+        <div id="media-container" style="display: flex; justify-content: center; align-items: center;">
+          <!-- content here -->
+        </div>
+        <h2 class="subtitle has-text-centered" style="max-width: 90%; margin: 0 auto;">
+          We implemented semantic grasping pose estimation with F3RM.
+        </h2>
+        
+        <script>
+          const imageSelect = document.getElementById('imageSelect');
+          const mediaContainer = document.getElementById('media-container');
+        
+          const mediaSources = {
+            bowl: "../img/web_img/tamma/bowl.mp4",
+            cube: "../img/web_img/tamma/cube.mp4",
+            "3d_grasp": "../img/web_img/tamma/3d_grasp.png",
+            "3d": "../img/web_img/tamma/3d.png"
+          };
+        
+          function loadMedia(source) {
+            const extension = source.split('.').pop().toLowerCase();
+        
+            mediaContainer.innerHTML = '';
+        
+            if (extension === 'mp4') {
+              const video = document.createElement('video');
+              video.src = source;
+              video.controls = true;
+              video.autoplay = true;
+              video.muted = true;
+              video.loop = true;
+              video.style.height = '400px';
+              video.style.width = 'auto';
+              video.style.objectFit = 'cover';
+              mediaContainer.appendChild(video);
+            } else {
+              const img = document.createElement('img');
+              img.src = source;
+              img.style.height = '400px';
+              img.style.width = 'auto';
+              img.style.objectFit = 'cover';
+              mediaContainer.appendChild(img);
+            }
+          }
+        
+          imageSelect.addEventListener('change', function() {
+            const selectedOption = imageSelect.value;
+            const selectedSource = mediaSources[selectedOption];
+            loadMedia(selectedSource);
+          });
+        
+          loadMedia(mediaSources[imageSelect.value]);
+        </script>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End image carousel -->
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page. This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

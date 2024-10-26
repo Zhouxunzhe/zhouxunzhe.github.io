@@ -29,7 +29,7 @@
       }
       table {
         width: 100%;
-        max-width: 800px;
+        max-width: 830px;
         border: 0;
         border-spacing: 0;
         border-collapse: separate;
@@ -136,8 +136,8 @@
                 </p>
               </td>
               <td style="width: 40%; max-width: 40%;">
-                <a href="assets/img/berkeley.jpg">
-                  <img alt="profile photo" src="assets/img/berkeley.jpg" style="width:100%;max-width:100%;object-fit: cover;" class="hoverZoomLink">
+                <a href="assets/img/profile/berkeley.jpg">
+                  <img alt="profile photo" src="assets/img/profile/berkeley.jpg" style="width:100%;max-width:100%;object-fit: cover;" class="hoverZoomLink">
                 </a>
               </td>
             </tr>
@@ -148,7 +148,7 @@
             <p>[Dec. 2023] Our paper <strong>CELLO</strong> is accepted by AAAI 2024!</p>
           </div>
 
-          <div class="research" style="text-align: justify; width: 90%;">
+          <div class="research" style="text-align: justify;">
             <h2>Research</h2>
             <p>
               My ultimate goal is to enable robots to assist human with daily task automatically. 
@@ -171,26 +171,48 @@
               <!-- <tr bgcolor="#ffffd0"> -->
               <tr>
                 <td style="width: 30%; vertical-align: middle;">
-                  <img src="./assets/img/2023_cello.png" alt="CELLO" width="200">
+                  <img src="assets/img/teaser/2024_emos.gif" alt="RC" width="200">
                 </td>
                 <td style="width: 70%; vertical-align: middle;">
-                  <a><strong><span class="papertitle">Can Large Language Models Understand Real-World Complex Instructions?</span></strong></a><br>
-                  Q. He, J. Zeng, W. Huang, L. Chen, J. Xiao, Q. He, <u><strong>Xunzhe Zhou</strong></u>, J. Liang, Y. Xiao<br>
-                  <em>AAAI</em>, 2024<br>
-                  <a href="https://abbey4799.github.io/publication/cello/">project page</a> / <a href="assets/abstract/2023_cello.txt">abstract</a> / <a href="https://ojs.aaai.org/index.php/AAAI/article/view/29777">paper</a> / <a href="https://github.com/Abbey4799/CELLO">code</a> / <a href="assets/bibtex/2023_cello.bib">bibtex</a> / <a href="https://underline.io/lecture/92662-can-large-language-models-understand-real-world-complex-instructionsquestion">video</a>
-                  <p>We propose CELLO, a benchmark for evaluating LLMs' ability to follow complex instructions. We design eight features for complex instructions and construct a comprehensive evaluation dataset from real-world scenarios. We also establish four criteria and corresponding metrics.</p>
+                  <a><strong><span class="papertitle">EMOS: Embodiment-aware Heterogeneous Multi-robot Operating System with LLM Agents</span></strong></a><br>
+                  <u><strong>Xunzhe Zhou*</strong></u>, J. Chen*, C. Yu*, T. Xu, Y. Mu, M. Hu, W. Shao, Y. Wang, G. Li, L. Shao<br>
+                  <em>In submission</em>, 2024<br>
+                  <!-- <a href="assets/abstract/2024_rc.txt">abstract</a> -->
+                  <p>
+                    In the the real-world robot environment, the capability of the agent in MAS is tied to the physical composition of the robot. 
+                    We introduced a multi-agent framework EMOS to improve the collaboration among heterogeneous robots with varying embodiment capabilities.
+                    To evaluate how well our MAS performs, we designed Habitat-MAS benchmark, including four tasks: 1) navigation, 2) perception, 3) manipulation, and 4) comprehensive multi-floor object rearrangement.
+                  </p>
                 </td>
               </tr>
               <tr>
                 <td style="width: 30%; vertical-align: middle;">
-                  <img src="assets/img/2024_rc.png" alt="RC" width="200">
+                  <a href="https://abbey4799.github.io/publication/cello/"><img src="./assets/img/teaser/2023_cello.png" alt="CELLO" width="200"></a>
+                </td>
+                <td style="width: 70%; vertical-align: middle;">
+                  <a href="https://abbey4799.github.io/publication/cello/"><strong><span class="papertitle">Can Large Language Models Understand Real-World Complex Instructions?</span></strong></a><br>
+                  Q. He, J. Zeng, W. Huang, L. Chen, J. Xiao, Q. He, <u><strong>Xunzhe Zhou</strong></u>, J. Liang, Y. Xiao<br>
+                  <em>AAAI</em>, 2024<br>
+                  <a href="https://abbey4799.github.io/publication/cello/">project page</a> / <a href="assets/abstract/2023_cello.txt">abstract</a> / <a href="./assets/files/paper/cello.pdf">paper</a> / <a href="https://github.com/Abbey4799/CELLO">code</a> / <a href="assets/bibtex/2023_cello.bib">bibtex</a> / <a href="https://underline.io/lecture/92662-can-large-language-models-understand-real-world-complex-instructionsquestion">video</a>
+                  <p>
+                    Current LLMs often ignore semantic constraints, generate incorrect formats, violate length or count constraints, and be unfaithful to input text.
+                    We propose CELLO, a benchmark for evaluating LLMs' ability to follow complex instructions. We design a real-world dataset carefully crafted by human experts with 566 samples and 9 tasks. We also established 4 criteria and corresponding metrics and compared 18 Chinese-oriented models and 15 English-oriented models.
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td style="width: 30%; vertical-align: middle;">
+                  <img src="assets/img/teaser/2024_rc.png" alt="RC" width="200">
                 </td>
                 <td style="width: 70%; vertical-align: middle;">
                   <a><strong><span class="papertitle">Reservoir Computing as Digital Twins for Controlling Nonlinear Dynamical Systems</span></strong></a><br>
                   <u><strong>Xunzhe Zhou*</strong></u>, R. Cao*, J. Hou, C. Guan, S. Leng<br>
                   <em>In submission</em>, 2023<br>
-                  <!-- <a href="assets/abstract/2024_rc.txt">abstract</a> -->
-                  <p>We validate the effectiveness of our digital twins in replicating unknown complex systems and further demonstrate how to select and implement appropriate control strategies based on the specific requirements.</p>
+                  <p>
+                    It is difficult to control a chaotic system without knowing its differential equation and traditional control strategies require continuous adjustment with various parameters.
+                    To address this issue, we leveraged Echo State Network as the digital twin to predict and control the behavior of chaotic systems. 
+                    We evaluated our model performance on 3 chaotic systems and 3 control strategies collectively. 
+                    And we conducted extensive experiments to validate the prediction accuracy, control efficiency, and noise robustness of our model.</p>
                 </td>
               </tr>
             </table>
@@ -199,43 +221,52 @@
           <div class="projects" style="text-align: justify;">
             <h2>Selected Projects</h2>
             <table>
-                <!-- <tr>
-                    <td style="width: 30%; vertical-align: middle;">
-                    <img src="assets/img/2024_tamma.gif" alt="NST" width="200">
-                    </td>
-                    <td style="width: 70%; vertical-align: middle;">
-                    <a><strong><span class="papertitle">Mobile Manipulation Based on Semantic 3D Reconstruction</span></strong></a><br>
-                    <em>Construct a mobile manipulation and task planning system</em><br>
-                    <a href="">project page</a>
-                    <p>We construct a mobile manipulation system with the robot assembled with a Franka Panda arm and a Hermes mobile base. I was responsible for 1) grasping pose estimation, 2) mobile base navigation, and 3) hierarchical task planning. The follow-up work: <em>TaMMa</em> (Hou et al.) is accepted by <em>CoRL 2024</em>.
-                    </p>
-                    </td>
-                </tr> -->
                 <tr>
                   <td style="width: 30%; vertical-align: middle;">
-                  <img src="assets/img/2024_tamma.gif" alt="NST" width="200">
+                    <a href="./assets/index/tamma.html"><img src="assets/img/teaser/2024_tamma.gif" alt="TAMMA" width="200"></a>
                   </td>
                   <td style="width: 70%; vertical-align: middle;">
-                  <a><strong><span class="papertitle">Mobile Manipulation Based on Semantic 3D Reconstruction</span></strong></a><br>
+                    <a href="./assets/index/tamma.html"><strong><span class="papertitle">Mobile Manipulation Based on Semantic 3D Reconstruction and VLMs</span></strong></a><br>
+                  J. Hou, <u><strong>Xunzhe Zhou</strong></u>, T. Pan, J. Zhang, S. Li, J. Lin, K. Wang, J. Huang, Y. Fu, X. Xue<br>
                   <em>Construct a mobile manipulation and task planning system</em><br>
-                  <a href="">project page</a>
-                  <p>We construct a mobile manipulation system with the robot assembled with a Franka Panda arm and a Hermes mobile base. I was responsible for 1) grasping pose estimation, 2) mobile base navigation, and 3) hierarchical task planning. The follow-up work: <em>TaMMa</em> (Hou et al.) is accepted by <em>CoRL 2024</em>.
+                  <a href="./assets/index/tamma.html">project page</a>/ <a>code(soon)</a>
+                  <p>
+                    Aiming to build a service robot with generalizability in daily life scenarios, we constructed a mobile manipulation system with a robot assembled with Franka Panda arm and Hermes mobile base. 
+                    In this project, I was responsible for implementing 1) semantic grasping pose estimation, 2) semantic mobile base navigation, and 3) hierarchical task planning with 3D reconstruction and VLMs. The follow-up work: <em>TaMMa</em> (Hou et al.) was accepted by <em>CoRL 2024</em>.
                   </p>
                   </td>
               </tr>
-                <tr>
-                    <td style="width: 30%; vertical-align: middle;">
-                    <img src="assets/img/2023_nst.png" alt="NST" width="200">
-                    </td>
-                    <td style="width: 70%; vertical-align: middle;">
-                    <a><strong><span class="papertitle">Neural Style Transfer Based on Fine Tuning Vision Transformer</span></strong></a><br>
-                    <em>UC Berkeley CS182/282A course project, Fall 2023</em><br>
-                    <a href="https://github.com/Zhouxunzhe/NST-NeuralStyleTransfer">project page</a> / <a href="assets/files/paper/nst.pdf">essay</a> / <a href="https://github.com/Zhouxunzhe/NST-NeuralStyleTransfer">code</a>
-                    <p>To improve Neural Style Transfer, we replace the content and style encoders of StyTr<sup>2</sup> with pre-trained ViTs.
-                    Restricted by practical computation limitations, we leveraged a two-stage training strategy: we first freeze the pre-trained ViTs, just train the decoders. Then we wrap LoRA to fine-tune ViTs with COCO datasets for joint training.
-                    </p>
-                    </td>
-                </tr>
+              <tr>
+                  <td style="width: 30%; vertical-align: middle;">
+                    <a href="./assets/index/vcd.html"><img src="assets/img/teaser/2024_vcd.png" alt="VCD" width="200"></a>
+                  </td>
+                  <td style="width: 70%; vertical-align: middle;">
+                  <a href="./assets/index/vcd.html"><strong><span class="papertitle">Resolving Knowledge Conflicts in Vision-Language Models</span></strong></a><br>
+                  <u><strong>Xunzhe Zhou</strong></u>, X. Li, Y. Zheng, X. Xue<br>
+                  <em>Construct a small VQA dataset for evaluation, resolve with contrastive decoding</em><br>
+                  <a href="./assets/index/vcd.html">project page</a> / <a href="https://github.com/Zhouxunzhe/TRUTH">code</a>
+                  <p>
+                    VLMs tend to perform hallucination when the image input conflicts with the LLM decoder knowledge base (common sense). 
+                    To resolve this issue, we constructed a small-scale VQA dataset with images involving knowledge conflicts from the Internet or generated with DALL·E 3 for validation, and evaluated 8 state-of-the-art VLMs on the dataset. 
+                    We also resolved the knowledge conflicts in LLaVA-1.5 with contrastive decoding.
+                  </p>
+                  </td>
+              </tr>
+              <tr>
+                  <td style="width: 30%; vertical-align: middle;">
+                    <a href="./assets/index/nst.html"><img src="assets/img/teaser/2023_nst.png" alt="NST" width="200"></a>
+                  </td>
+                  <td style="width: 70%; vertical-align: middle;">
+                    <a href="./assets/index/nst.html"><strong><span class="papertitle">Neural Style Transfer Based on Fine Tuning Vision Transformer</span></strong></a><br>
+                  <u><strong>Xunzhe Zhou</strong></u>, Y. Liu, Y. Zhao, Y. Chen<br>
+                  <em>UC Berkeley CS182/282A course project, Fall 2023</em><br>
+                  <a href="./assets/index/nst.html">project page</a> / <a href="assets/files/paper/nst.pdf">essay</a> / <a href="https://github.com/Zhouxunzhe/NST-NeuralStyleTransfer">code</a>
+                  <p>
+                    To improve Neural Style Transfer, we replaced the content and style encoders of StyTr<sup>2</sup> with pre-trained ViT.
+                    Restricted by practical computation limitations, we leveraged a two-stage training strategy: we first froze the pre-trained ViT, just trained the decoders. Then we wrapped LoRA to fine-tune ViT with COCO datasets for joint training.
+                  </p>
+                  </td>
+              </tr>
             </table>
           </div>
 
