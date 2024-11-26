@@ -128,7 +128,7 @@
                 </p>
                 <p style="text-align:center">
                   <a href="mailto:xunzhe_zhou@outlook.com">Email</a> &nbsp;/&nbsp;
-                  <a href="./assets/files/cv/CV_202410.pdf">CV</a> &nbsp;/&nbsp;
+                  <a href="./assets/files/cv/CV_202411.pdf">CV(2024.11)</a> &nbsp;/&nbsp;
                   <a href="https://github.com/Zhouxunzhe">GitHub</a> &nbsp;/&nbsp;
                   <a href="https://scholar.google.com/citations?hl=en&user=TJDarAwAAAAJ">Scholar</a> &nbsp;/&nbsp;
                   <a href="https://www.linkedin.com/in/xunzhe-zhou/">LinkedIn</a> &nbsp;/&nbsp;
@@ -145,33 +145,51 @@
 
           <div class="news" style="text-align: justify;">
             <h2>News</h2>
-            <p>[Dec. 2023] Our paper <strong>CELLO</strong> is accepted by AAAI 2024!</p>
+            <p>
+              [Nov. 2024] Excited to join Shanghai AI Lab as a research intern!<br>
+              [Dec. 2023] Our paper <strong>CELLO</strong> is accepted by AAAI 2024!
+            </p>
           </div>
 
-          <div class="research" style="text-align: justify;">
+          <!-- <div class="research" style="text-align: justify;">
             <h2>Research</h2>
             <p>
-              My ultimate goal is to enable robots to assist human with daily task automatically. 
+              My research interest is to efficiently leverage generalization and common sense knowledge of foundation models for robotic decision making and policy learning.
             </p>
-            <p>
-              My current research interests focus on leveraging existing foundational models to assist robots with perception and decision-making in the physical world. Specifically, <br>1) I aim to develop a general perception system to understand complex and dynamical environments; <br>2) I seek to create a general decision-making systems for real-world long-term task planning.
-            </p>
-            <p>
-              In the future, I plan to continue my research work with a unified lifelong learning system by <br>1) developing a data collection system in different scenarios with various tasks, <br>2) constructing a universal learning system for heterogeneous robots to learn unified skills, and <br>3) building a collaborative system to enable real robots complete daily task more efficiently.
-            </p>
-          </div>
+          </div> -->
 
           <div class="publications" style="text-align: justify;">
             <h2>Publications</h2>
             <p>
               <!-- Representative papers are <span class="highlight">highlighted</span>.  -->
-              * denotes equal contribution.
+              My research interest is to efficiently leverage generalization and common sense knowledge of foundation models for robotics decision making and policy learning.
+            </p>
+            <p>
+              * denotes equal contribution. Representative papers are <span class="highlight">highlighted</span>.
             </p>
             <table>
               <!-- <tr bgcolor="#ffffd0"> -->
               <tr>
                 <td style="width: 30%; vertical-align: middle;">
-                  <img src="assets/img/teaser/2024_emos.gif" alt="RC" width="200">
+                  <img src="assets/img/teaser/2024_biadapt.gif" alt="biadapt" width="200">
+                </td>
+                <td style="width: 70%; vertical-align: middle;">
+                  <a><strong><span class="papertitle">Bi-Adapt: Few-shot Bimanual Adaptation for Novel Categories of 3D Objects via Semantic Correspondence</span></strong></a><br>
+                  Jinxian Zhou, Ruihai Wu, <u><strong>Xunzhe Zhou</strong></u>, Checheng Yu, Licheng Zhong, Lin Shao<br>
+                  <p style="margin-top: 5px;">
+                    <em>In submission</em>, 2024<br>
+                    <a href="./assets/abstract/2024_biadapt.txt">abstract</a>
+                  </p>
+                  <p>
+                    Bimanual manipulation tasks require collaboration, leading to a high demand for extensive training data. 
+                    We introduce Bi-Adapt, a novel framework for learning bi-manual manipulation of novel categories. 
+                    We leverage semantic correspondence from foundation models with generalization and few-shot adaptations using minimal data to achieves high success rates in cross-category bi-manual manipulation tasks.
+                  </p>
+                </td>
+              </tr>
+              <tr bgcolor="#ffffd0">
+                <td style="width: 30%; vertical-align: middle;">
+                  <img src="assets/img/teaser/2024_emos.gif" alt="emos" width="200">
                 </td>
                 <td style="width: 70%; vertical-align: middle;">
                   <a><strong><span class="papertitle">EMOS: Embodiment-aware Heterogeneous Multi-robot Operating System with LLM Agents</span></strong></a><br>
@@ -226,8 +244,9 @@
 
           <div class="projects" style="text-align: justify;">
             <h2>Selected Projects</h2>
+            <p></p>
             <table>
-                <tr>
+                <tr bgcolor="#ffffd0">
                   <td style="width: 30%; vertical-align: middle;">
                     <a href="./assets/index/tamma.html"><img src="assets/img/teaser/2024_tamma.gif" alt="TAMMA" width="200"></a>
                   </td>
@@ -281,6 +300,12 @@
               </tr>
             </table>
           </div>
+    
+          <p><center>
+            <div id="clustrmaps-widget" style="width:30%">
+              <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=n0SkOoBvZTU7xJCIILfA4KdgOkhhX4zFnKKOH93eEH8&cl=ffffff&w=a"></script>
+            <br>
+          </center></p >
 
           <div class="footer" style="text-align: justify;">
             <p style="text-align: center">Design and source code from <a href="https://github.com/jonbarron/jonbarron_website">Jon Barron's website</a>.</p>
@@ -327,6 +352,6 @@
   
           themeIcon.src = newTheme === 'dark-mode' ? 'assets/icon/moon.svg' : 'assets/icon/sun.svg';
         });
-      </script>
+    </script>
   </body>
 </html>
