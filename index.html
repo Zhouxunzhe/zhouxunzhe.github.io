@@ -104,6 +104,19 @@
         height: 40px;
         transition: transform 0.3s ease;
       }
+      .timeline {
+        font-family: Arial, sans-serif;
+      }
+      .event {
+        display: flex;
+        margin-bottom: 0px;
+      }
+      .event-date {
+        min-width: 80px;
+      }
+      .event-text {
+        flex: 1;
+      }
     </style>
   </head>
   <body>
@@ -150,7 +163,28 @@
           <div class="news" style="text-align: justify;">
             <h2>News</h2>
             <p>
-              [Dec. 2023] Our paper <strong>CELLO</strong> is accepted by AAAI 2024!
+              <div class="timeline">
+                <div class="event">
+                  <div class="event-date"><strong>[Nov. 2024]</strong></div>
+                  <div class="event-text">Excited to join Shanghai AI Lab as a research intern!</div>
+                </div>
+                <div class="event">
+                  <div class="event-date"><strong>[Dec. 2023]</strong></div>
+                  <div class="event-text">Our paper <strong>CELLO</strong> is accepted by AAAI 2024!</div>
+                </div>
+                <div class="event">
+                  <div class="event-date"><strong>[Aug. 2023]</strong></div>
+                  <div class="event-text">Honored to visit UC Berkeley as an exchange student!</div>
+                </div>
+                <div class="event">
+                  <div class="event-date"><strong>[Sep. 2021]</strong></div>
+                  <div class="event-text">Proud to transfer to Computer Science and Technology major!</div>
+                </div>
+                <div class="event">
+                  <div class="event-date"><strong>[Sep. 2020]</strong></div>
+                  <div class="event-text">Excited to begin my undergraduate journey at Fudan University!</div>
+                </div>
+              </div>
             </p>
           </div>
 
@@ -350,7 +384,7 @@
                     National University of Singapore, Singapore
                     <span style="float: right;">2024.07 - 2024.12</span>
                   </p>
-                  <p>Research Assistant (Advisor: Prof. <a href="https://linsats.github.io/">Lin Shao</a>)</p>
+                  <p>Research Assistant (Advisor: Prof. Lin Shao)</p>
                 </td>
               </tr>
 
