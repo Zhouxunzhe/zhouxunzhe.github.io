@@ -4,7 +4,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Xunzhe Zhou's Homepage</title>
     <meta name="author" content="Xunzhe Zhou">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preload" href="assets/img/profile/la.jpg" as="image">
+    <link rel="preload" href="assets/icon/sun.svg" as="image">
+
+    <!-- 图标 -->
     <link rel="shortcut icon" href="assets/icon/industry_robot.svg" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
     <style>
@@ -22,6 +26,62 @@
         background-color: #1F1F1F;
         color: #FFFFFF;
       }
+      .hover-img {
+        position: relative;
+        color: #007BFF;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      body.dark-mode .hover-img {
+        color: #80CFFF;
+      }
+
+      .hover-img::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: calc(100% + 10px);
+        transform: translateX(-50%);
+        width: 200px;
+        height: 200px;
+        background-image: var(--hover-image);
+        background-size: cover;
+        background-position: center;
+        border: 3px solid #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        pointer-events: none;
+        z-index: 1000;
+      }
+
+      .hover-img:hover::after {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .hover-img::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: calc(100% + 2px);
+        transform: translateX(-50%);
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-top: 8px solid #fff;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        z-index: 1001;
+      }
+
+      .hover-img:hover::before {
+        opacity: 1;
+        visibility: visible;
+      }
       .name {
         text-align: center;
         font-size: xx-large;
@@ -29,7 +89,7 @@
       }
       table {
         width: 100%;
-        max-width: 1000px;
+        max-width: 900px;
         border: 0;
         border-spacing: 0;
         border-collapse: separate;
@@ -131,43 +191,42 @@
   </head>
   <body>
     <button class="theme-toggle" id="theme-toggle">
-      <img src="assets/icon/sun.svg" id="theme-icon" alt="Toggle Theme">
+      <img src="assets/icon/sun.svg" id="theme-icon" alt="Toggle Theme" loading="eager">
     </button>
     <table>
       <tr>
         <td>
           <table>
             <tr>
-              <td style="width: 60%; vertical-align: middle; text-align: justify;">
+              <td style="width: 48%; vertical-align: middle; text-align: justify;">
                 <p class="name">Xunzhe Zhou</p>
                 <p>
-                  I am an undergraduate student at <a href="https://www.fudan.edu.cn/en/">Fudan University</a>, pursuing my Bachelor's degree in Computer Science and Technology.
+                  I am Year-1 PhD student at <a href="https://datascience.hku.hk/">HKU IDS</a>, supervised by Prof. <a href="https://yanchaoyang.github.io/">Yanchao Yang</a> and Prof. <a href="https://people.eecs.berkeley.edu/~yima/">Yi Ma</a>. I received my Bachelor's degree in Computer Science at Fudan University.
                 </p>
                 <p>
-                  Recently, I have been a research assistant at <a href="https://www.comp.nus.edu.sg/">NUS</a> working with Prof. <a href="https://linsats.github.io/">Lin Shao</a> studying robotic task and motion planning. 
-                  Previously, I collaborated with Prof. <a href="https://yanweifu.github.io/">Yanwei Fu</a> and Prof. <a href="https://faculty.fudan.edu.cn/xyxue/zh_CN/index.htm">Xiangyang Xue</a> on constructing a mobile manipulation system with 3D Semantic Fields and Vision-Language Models. 
-                  Before that, I studied LLMs' real-world complex instruction following capabilities with Prof. <a href="http://kw.fudan.edu.cn/people/xiaoyanghua/">Yanghua Xiao</a>, 
-                  and nonlinear dynamical systems control with Prof. <a href="https://faculty.fudan.edu.cn/syleng/zh_CN/index.htm">Siyang Leng</a>.
+                  Previously, I interned at Shanghai AI Lab, mentored by Dr. <a href="https://biqing-qi.github.io/">Biqing Qi</a> and Dr. <a href="https://yding25.com/">Yan Ding</a>.
+                  Before that, I have worked on open-world mobile manipulation with Prof. <a href="https://linsats.github.io/">Lin Shao</a> from NUS,  
+                  Prof. <a href="https://faculty.fudan.edu.cn/xyxue/zh_CN/index.htm">Xiangyang Xue</a> and Prof. <a href="https://yanweifu.github.io/">Yanwei Fu</a> from Fudan. 
+                  I also have active connection with Prof. <a href="http://kw.fudan.edu.cn/people/xiaoyanghua/">Yanghua Xiao</a> and Prof. <a href="https://faculty.fudan.edu.cn/syleng/zh_CN/index.htm">Siyang Leng</a>. 
+                  I exchanged at UC Berkeley during 2023 Fall, with GPA 4.0/4.0
                 </p>
-                <p>
-                  I also had a wonderful semester at the <a href="https://www.berkeley.edu/">UC Berkeley</a> during fall 2023, where I studied reinforcement learning, deep learning, optimization models, and artificial intelligence, with GPA 4.00 / 4.00.
-                </p>
-                <p>
-                  I am excited to join <a href="https://www.shlab.org.cn/">Shanghai AI Lab</a> as a research intern!
-                </p>
+                <p class="new">I am actively looking for interns and collaborators, feel free to contact me if interested!</p>
                 <p style="text-align:center">
                   <a href="mailto:xunzhe_zhou@outlook.com">Email</a> &nbsp;/&nbsp;
-                  <a href="./assets/files/cv/CV_202501.pdf">CV(2025.01)</a> &nbsp;/&nbsp;
+                  <a href="./assets/files/cv/CV_202510.pdf">CV(2025.10)</a> &nbsp;/&nbsp;
                   <a href="https://github.com/Zhouxunzhe">GitHub</a> &nbsp;/&nbsp;
                   <a href="https://scholar.google.com/citations?hl=en&user=TJDarAwAAAAJ">Scholar</a> &nbsp;/&nbsp;
-                  <a href="https://www.linkedin.com/in/xunzhe-zhou/">LinkedIn</a> &nbsp;/&nbsp;
-                  <a href="https://x.com/XunzheZhou">Twitter</a>
+                  <!-- <a href="https://www.linkedin.com/in/xunzhe-zhou/">LinkedIn</a> &nbsp;/&nbsp; -->
+                  <!-- <a href="https://x.com/XunzheZhou">Twitter</a> &nbsp;/&nbsp; -->
+                  <a  
+                    class="hover-img" 
+                    style="--hover-image: url('assets/img/profile/wechat.jpg')">
+                    WeChat
+                  </a>
                 </p>
               </td>
               <td style="width: 40%; max-width: 40%;">
-                <a href="assets/img/profile/la.jpg">
-                  <img alt="profile photo" src="assets/img/profile/la.jpg" style="width:100%;max-width:100%;object-fit: cover;" class="hoverZoomLink">
-                </a>
+                <img alt="profile photo" src="assets/img/profile/la.jpg" style="width:100%;max-width:100%;object-fit: cover;" class="hoverZoomLink" loading="eager">
               </td>
             </tr>
           </table>
@@ -175,34 +234,28 @@
           <!-- News -->
           <div class="news" style="text-align: justify;">
             <h2>News</h2>
-            <p>
-              <div class="timeline">
-                <div class="event">
-                  <div class="event-date"><strong><span class="new">NEW</span></strong> [Jan. 2025]</div>
-                  <div class="event-text">Our paper <strong>EMOS</strong> is accepted by ICLR 2025!</div>
-                </div>
-                <div class="event">
-                  <div class="event-date"><strong><span class="new">NEW</span></strong> [Dec. 2024]</div>
-                  <div class="event-text">Excited to join Shanghai AI Lab as a research intern!</div>
-                </div>
-                <div class="event">
-                  <div class="event-date">[Dec. 2023]</div>
-                  <div class="event-text">Our paper <strong>CELLO</strong> is accepted by AAAI 2024!</div>
-                </div>
-                <div class="event">
-                  <div class="event-date">[Aug. 2023]</div>
-                  <div class="event-text">Honored to visit UC Berkeley as an exchange student!</div>
-                </div>
-                <!-- <div class="event">
-                  <div class="event-date">[Sep. 2021]</div>
-                  <div class="event-text">Proud to transfer to Computer Science and Technology major!</div>
-                </div> -->
-                <div class="event">
-                  <div class="event-date">[Sep. 2020]</div>
-                  <div class="event-text">Excited to begin my undergraduate journey at Fudan University!</div>
-                </div>
+            <div class="timeline">
+              <div class="event">
+                <div class="event-date"><strong><span class="new">NEW</span></strong> [Sep. 2025]</div>
+                <div class="event-text">Our paper <strong>Hyper-GoalNet</strong> is accepted by NeurIPS 2025!</div>
               </div>
-            </p>
+              <div class="event">
+                <div class="event-date"><strong><span class="new">NEW</span></strong> [Jan. 2025]</div>
+                <div class="event-text">Our paper <strong>EMOS</strong> is accepted by ICLR 2025!</div>
+              </div>
+              <div class="event">
+                <div class="event-date">[Dec. 2024]</div>
+                <div class="event-text">Excited to join Shanghai AI Lab as a research intern!</div>
+              </div>
+              <div class="event">
+                <div class="event-date">[Dec. 2023]</div>
+                <div class="event-text">Our paper <strong>CELLO</strong> is accepted by AAAI 2024!</div>
+              </div>
+              <div class="event">
+                <div class="event-date">[Aug. 2023]</div>
+                <div class="event-text">Honored to visit UC Berkeley as an exchange student!</div>
+              </div>
+            </div>
           </div>
 
           <!-- <div class="research" style="text-align: justify;">
@@ -214,11 +267,7 @@
 
           <!-- Publications -->
           <div class="publications" style="text-align: justify;">
-            <h2>Publications</h2>
-            <p>
-              <!-- Representative papers are <span class="highlight">highlighted</span>.  -->
-              My research interest is to efficiently leverage generalization and common sense knowledge of foundation models for robotics decision making and policy learning.
-            </p>
+            <h2>Selected Papers</h2>
             <p>
               * denotes equal contribution. Representative papers are <span class="highlight">highlighted</span>.
             </p>
@@ -227,38 +276,36 @@
 
               <!-- Bi-Adapt -->
               <tr>
-                <td style="width: 30%; vertical-align: middle;">
-                  <img src="assets/img/teaser/2024_biadapt.gif" alt="biadapt" width="200">
+                <td style="width: 40%; vertical-align: middle;">
+                  <img src="assets/img/teaser/2024_biadapt.png" alt="biadapt" width="200" loading="lazy">
                 </td>
-                <td style="width: 70%; vertical-align: middle;">
+                <td style="width: 60%; vertical-align: middle;">
                   <a><strong><span class="papertitle">Bi-Adapt: Few-shot Bimanual Adaptation for Novel Categories of 3D Objects via Semantic Correspondence</span></strong></a><br>
-                  Jinxian Zhou, Ruihai Wu, <u><strong>Xunzhe Zhou</strong></u>, Checheng Yu, Licheng Zhong, Lin Shao<br>
+                  Jinxian Zhou, Ruihai Wu, Yiwei Liu, Yiwen Hou, <u><strong>Xunzhe Zhou</strong></u>, Checheng Yu, Licheng Zhong, Lin Shao<br>
                   <p style="margin-top: 5px;">
-                    <em>In submission</em>, 2024<br>
-                    <a href="./assets/abstract/2024_biadapt.txt">abstract</a>
+                    <em>In submission</em><br>
                   </p>
                   <p>
-                    Bimanual manipulation tasks require collaboration, leading to a high demand for extensive training data. 
-                    We introduce Bi-Adapt, a novel framework for learning bi-manual manipulation of novel categories. 
-                    We leverage semantic correspondence from foundation models with generalization and few-shot adaptations using minimal data to achieves high success rates in cross-category bi-manual manipulation tasks.
+                    We present Bi-Adapt, a novel framework designed for efficient learning of generalizable bimanual manipulation. 
+                    It first learns point-level action on the supporting set for different bimanual tasks, then it predicts actions on novel categories based on the foundation-model-guided affordance,
+                    enabling cross-category generalization after few-shot adaptation.
                   </p>
                 </td>
               </tr>
 
               <!-- EMOS -->
               <tr class="highlight">
-                <td style="width: 30%; vertical-align: middle;">
-                  <a href="https://emos-project.github.io/"><img src="assets/img/teaser/2024_emos.gif" alt="emos" width="200"></a>
+                <td style="width: 40%; vertical-align: middle;">
+                  <img src="assets/img/teaser/2024_emos.jpg" alt="emos" width="200" loading="lazy">
                 </td>
-                <td style="width: 70%; vertical-align: middle;">
+                <td style="width: 60%; vertical-align: middle;">
                   <a href="https://emos-project.github.io/"><strong><span class="papertitle">EMOS: Embodiment-aware Heterogeneous Multi-robot Operating System with LLM Agents</span></strong></a><br>
-                  <u><strong>Xunzhe Zhou*</strong></u>, Junting Chen*, Checheng Yu*, Tianqi Xu, Yao Mu, Mengkang Hu, Wenqi Shao, Yikai Wang, Guohao Li, Lin Shao<br>
+                  Junting Chen*, Checheng Yu*, <u><strong>Xunzhe Zhou*</strong></u>, Tianqi Xu, Yao Mu, Mengkang Hu, Wenqi Shao, Yikai Wang, Guohao Li, Lin Shao<br>
                   <p style="margin-top: 5px;">
                     <strong><em>International Conference on Learning Representations (ICLR)</em>, 2025</strong><br>
-                    <a href="https://emos-project.github.io/">project page</a> / <a href="./assets/abstract/2024_emos.txt">abstract</a> / <a href="./assets/files/paper/emos.pdf">paper</a> / <a href="https://github.com/SgtVincent/EMOS">code</a> / <a href="./assets/bibtex/2024_emos.bib">bibtex</a>
+                    <a href="https://emos-project.github.io/">project page</a> / <a href="./assets/abstract/2024_emos.txt">abstract</a> / <a href="https://github.com/SgtVincent/EMOS">code</a> / <a href="./assets/bibtex/2024_emos.bib">bibtex</a>
                   </p>
                   <p>
-                    In the the real-world robot environment, the capability of the agent in MAS is tied to the physical composition of the robot. 
                     We introduced a multi-agent framework EMOS to improve the collaboration among heterogeneous robots with varying embodiment capabilities.
                     To evaluate how well our MAS performs, we designed Habitat-MAS benchmark, including four tasks: 1) navigation, 2) perception, 3) manipulation, and 4) comprehensive multi-floor object rearrangement.
                   </p>
@@ -267,27 +314,26 @@
 
               <!-- CELLO -->
               <tr>
-                <td style="width: 30%; vertical-align: middle;">
-                  <a href="https://abbey4799.github.io/publication/cello/"><img src="./assets/img/teaser/2023_cello.png" alt="CELLO" width="200"></a>
+                <td style="width: 40%; vertical-align: middle;">
+                  <a href="https://abbey4799.github.io/publication/cello/"><img src="./assets/img/teaser/2023_cello.png" alt="CELLO" width="200" loading="lazy"></a>
                 </td>
-                <td style="width: 70%; vertical-align: middle;">
+                <td style="width: 60%; vertical-align: middle;">
                   <a href="https://abbey4799.github.io/publication/cello/"><strong><span class="papertitle">Can Large Language Models Understand Real-World Complex Instructions?</span></strong></a><br>
                   Qianyu He, Jie Zeng, Wenhao Huang, Lina Chen, Jin Xiao, Qianxi He, <u><strong>Xunzhe Zhou</strong></u>, Lida Chen, Xintao Wang, Yuncheng Huang, Haoning Ye, Zihan Li, Shisong Chen, Yikai Zhang, Zhouhong Gu, Jiaqing Liang, Yanghua Xiao<br>
                   <p style="margin-top: 5px;">
                     <strong><em>AAAI Conference on Artificial Intelligence (AAAI)</em>, 2024</strong><br>
-                    <a href="https://abbey4799.github.io/publication/cello/">project page</a> / <a href="assets/abstract/2023_cello.txt">abstract</a> / <a href="./assets/files/paper/cello.pdf">paper</a> / <a href="https://github.com/Abbey4799/CELLO">code</a> / <a href="assets/bibtex/2023_cello.bib">bibtex</a> / <a href="https://underline.io/lecture/92662-can-large-language-models-understand-real-world-complex-instructionsquestion">video</a>
+                    <a href="https://abbey4799.github.io/publication/cello/">project page</a> / <a href="assets/abstract/2023_cello.txt">abstract</a> / <a href="https://github.com/Abbey4799/CELLO">code</a> / <a href="assets/bibtex/2023_cello.bib">bibtex</a> 
                   </p>
                   <p>
-                    Current LLMs often ignore semantic constraints, generate incorrect formats, violate length or count constraints, and be unfaithful to input text.
                     We propose CELLO, a benchmark for evaluating LLMs' ability to follow complex instructions. We design a real-world dataset carefully crafted by human experts with 566 samples and 9 tasks. We also established 4 criteria and corresponding metrics and compared 18 Chinese-oriented models and 15 English-oriented models.
                   </p>
                 </td>
               </tr>
 
               <!-- Reservoir Computing -->
-              <tr>
+              <!-- <tr>
                 <td style="width: 30%; vertical-align: middle;">
-                  <img src="assets/img/teaser/2024_rc.png" alt="RC" width="200">
+                  <img src="assets/img/teaser/2024_rc.png" alt="RC" width="200" loading="lazy">
                 </td>
                 <td style="width: 70%; vertical-align: middle;">
                   <a><strong><span class="papertitle">Reservoir Computing as Digital Twins for Controlling Nonlinear Dynamical Systems</span></strong></a><br>
@@ -301,18 +347,18 @@
                     We evaluated our model performance on 3 chaotic systems and 3 control strategies collectively. 
                     And we conducted extensive experiments to validate the prediction accuracy, control efficiency, and noise robustness of our model.</p>
                 </td>
-              </tr>
+              </tr> -->
             </table>
           </div>
 
           <!-- Selected Projects -->
-          <div class="projects" style="text-align: justify;">
+          <!-- <div class="projects" style="text-align: justify;">
             <h2>Selected Projects</h2>
             <p></p>
-            <table>
+            <table> -->
 
               <!-- TaMMa -->
-              <tr class="highlight">
+              <!-- <tr class="highlight">
                   <td style="width: 30%; vertical-align: middle;">
                     <a href="./assets/index/tamma.html"><img src="assets/img/teaser/2024_tamma.gif" alt="TAMMA" width="200"></a>
                   </td>
@@ -328,10 +374,10 @@
                     In this project, I was responsible for implementing 1) semantic grasping pose estimation, 2) semantic mobile base navigation, and 3) hierarchical task planning with 3D Semantic Fields and VLMs. The follow-up work: <em>TaMMa</em> (Hou et al.) was accepted by <em>CoRL 2024</em>.
                   </p>
                   </td>
-              </tr>
+              </tr> -->
 
               <!-- Knowledge Conflicts -->
-              <tr>
+              <!-- <tr>
                   <td style="width: 30%; vertical-align: middle;">
                     <a href="./assets/index/vcd.html"><img src="assets/img/teaser/2024_vcd.png" alt="VCD" width="200"></a>
                   </td>
@@ -348,10 +394,10 @@
                     We also resolved the knowledge conflicts in LLaVA-1.5 with contrastive decoding.
                   </p>
                   </td>
-              </tr>
+              </tr> -->
 
               <!-- Style Transfer -->
-              <tr>
+              <!-- <tr>
                   <td style="width: 30%; vertical-align: middle;">
                     <a href="./assets/index/nst.html"><img src="assets/img/teaser/2023_nst.png" alt="NST" width="200"></a>
                   </td>
@@ -369,30 +415,29 @@
                   </td>
               </tr>
             </table>
-          </div>
+          </div> -->
 
           <!-- Experience -->
-          <div class="experience" style="text-align: justify;">
+          <!-- <div class="experience" style="text-align: justify;">
             <h2>Experiences</h2>
-            <!-- <p></p> -->
-            <table>
+            <table> -->
 
               <!-- PJ Lab -->
-              <tr>
+              <!-- <tr>
                 <td style="width: 30%; vertical-align: middle; background-color: #FFFFFF;">
                   <img src="assets/img/exp/pjlab.png" alt="pjlab" width="200">
                 </td>
                 <td style="width: 70%; vertical-align: middle;">
                   <p style="font-size: 17px; margin: 0; font-weight: bold;">
                     Shanghai AI Laboratory, China
-                    <span style="float: right;">2024.12 - Present</span>
+                    <span style="float: right;">2024.12 - 2025.2</span>
                   </p>
-                  <p>Research Intern</p>
+                  <p>Intern (Mentors: Dr. Biqing Qi and Dr. Yan Ding)</p>
                 </td>
-              </tr>
+              </tr> -->
 
               <!-- NUS -->
-              <tr>
+              <!-- <tr>
                 <td style="width: 30%; vertical-align: middle; background-color: #FFFFFF;">
                   <img src="assets/img/exp/nus.png" alt="NUS" width="200">
                 </td>
@@ -403,10 +448,10 @@
                   </p>
                   <p>Research Assistant (Advisor: Prof. Lin Shao)</p>
                 </td>
-              </tr>
+              </tr> -->
 
               <!-- Berkeley -->
-              <tr>
+              <!-- <tr>
                   <td style="width: 30%; vertical-align: middle; background-color: #FFFFFF;">
                     <img src="assets/img/exp/berkeley.png" alt="Berkeley" width="200">
                   </td>
@@ -417,10 +462,10 @@
                     </p>
                     <p>Exchange Student (GPA: 4.00 / 4.00)</p>
                   </td>
-              </tr>
+              </tr> -->
 
               <!-- Fudan -->
-              <tr>
+              <!-- <tr>
                 <td style="width: 30%; vertical-align: middle; background-color: #ffffff;">
                   <img src="assets/img/exp/fudan.png" alt="Fudan" width="200">
                 </td>
@@ -430,13 +475,12 @@
                     <span style="float: right;">2020.09 - 2025.06</span>
                   </p>
                   <p>
-                    B.S. in Computer Science and Technology (2021.09 - 2025.06)<br>
-                    Natural Science Experimental Class (2020.09 - 2021.06)
+                    B.S. in Computer Science
                   </p>
                 </td>
               </tr>
             </table>
-          </div>
+          </div> -->
 
           <!-- <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=989898&w=a&t=tt&d=n0SkOoBvZTU7xJCIILfA4KdgOkhhX4zFnKKOH93eEH8&co=ffffff&ct=000000&cmo=feae3b&cmn=37b7d1'></script> -->
         
@@ -448,17 +492,15 @@
     </table>
 
     <script>
+        // 立即应用主题，避免闪烁
         const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
         const currentTheme = localStorage.getItem('theme') ||
           (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark-mode' : 'light-mode');
-        document.documentElement.classList.add(currentTheme);
-        document.documentElement.style.backgroundColor = currentTheme === 'dark-mode' ?  '#1F1F1F': '#FFFFFF';
         
-        document.documentElement.style.visibility = 'hidden';
-        window.addEventListener('load', () => {
-          document.body.classList.add(currentTheme);
-          document.documentElement.style.visibility = 'visible';
-        });
+        // 立即应用主题到body和html
+        document.documentElement.classList.add(currentTheme);
+        document.body.classList.add(currentTheme);
+        document.documentElement.style.backgroundColor = currentTheme === 'dark-mode' ?  '#1F1F1F': '#FFFFFF';
   
         const themeIcon = document.getElementById('theme-icon');
         themeIcon.src = currentTheme === 'dark-mode' ? 'assets/icon/moon.svg' : 'assets/icon/sun.svg';
